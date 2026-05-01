@@ -1,1 +1,1 @@
-"""AegisGraph agent package — LangGraph multi-agent SOC triage."""
+"""LangGraph nodes, prompts, and shared state for the triage pipeline."""

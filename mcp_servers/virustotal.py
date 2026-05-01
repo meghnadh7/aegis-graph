@@ -1,7 +1,7 @@
-"""VirusTotal v3 MCP server. Mock-mode produces deterministic fake verdicts."""
+"""VirusTotal v3 MCP server. In mock mode the verdicts are seeded by the IOC hash so they're stable across runs."""
 from __future__ import annotations
 import hashlib
-from typing import Any, Dict, Optional
+from typing import Any, Dict
 
 from .base import BaseMCP
 

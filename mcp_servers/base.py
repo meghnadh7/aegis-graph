@@ -1,4 +1,4 @@
-"""Base MCP server: shared cache, retry, mock-mode plumbing."""
+"""Shared scaffolding for the threat-intel MCP servers — cache + retries + mock toggle."""
 from __future__ import annotations
 import hashlib
 import json
@@ -18,7 +18,7 @@ class RateLimitError(Exception):
 
 
 class _InMemoryCache:
-    """Process-local fallback when Redis isn't available."""
+    """Tiny TTL cache. Keeps us from hammering external APIs with the same lookup."""
 
     def __init__(self) -> None:
         self._store: Dict[str, Any] = {}

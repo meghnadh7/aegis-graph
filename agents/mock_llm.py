@@ -1,7 +1,9 @@
-"""Deterministic stub LLM + embedder used when MOCK_MODE is on or no keys present.
+"""Stub LLM + embedder used when MOCK_MODE is on or no API keys are configured.
 
-Returns plausible structured outputs so the full graph can run end-to-end without
-hitting any external API.
+The stub is keyword-driven — it picks a technique by scanning the prompt for
+words like "powershell" or "lsass" — and seeds its randomness off a hash of
+the prompt so the same alert produces the same answer twice in a row. Good
+enough to demo the pipeline end-to-end without spending tokens.
 """
 from __future__ import annotations
 import hashlib
@@ -49,7 +51,7 @@ def _pick_technique(text: str) -> Dict[str, Any]:
 
 
 class MockLLM:
-    """Best-effort heuristic LLM stub. Recognizes prompt intent by keyword."""
+    """Tiny keyword-driven LLM stub. Recognizes prompt intent by which schema is requested."""
 
     def __init__(self) -> None:
         self.calls = 0
@@ -109,7 +111,14 @@ class MockLLM:
         schema_name = getattr(self._schema, "__name__", "")
 
         if "IOCExtraction" in schema_name:
-            iocs = _extract_iocs_from_text(text)
+            # The triage prompt has the raw alert and the enrichment payload glued
+            # together. We only want IOCs from the alert side — otherwise the
+            # mock ends up reporting noise from the enrichment URLs (e.g. the
+            # GreyNoise viz link) as if it were an alert IOC.
+            alert_section = text
+            if "Enrichment results" in text:
+                alert_section = text.split("Enrichment results", 1)[0]
+            iocs = _extract_iocs_from_text(alert_section)
             return {"iocs": iocs}
         if "ATTACK" in schema_name or "Mapping" in schema_name:
             t = _pick_technique(text)

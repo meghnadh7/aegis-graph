@@ -1,7 +1,7 @@
-"""Eval runner: executes the graph against the golden dataset and aggregates metrics.
+"""Run the graph over the golden dataset and aggregate the metrics.
 
-Tries to push results to LangSmith if a key is configured. Always prints a
-local summary and writes a `evals/last_results.json`.
+Always writes `evals/last_results.json`. If a real LangSmith key is in the
+env it'll also create/sync the dataset there, but that's optional.
 """
 from __future__ import annotations
 import asyncio

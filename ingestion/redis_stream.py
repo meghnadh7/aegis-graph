@@ -1,8 +1,8 @@
-"""Redis Stream publisher/consumer with an in-memory fallback for offline runs."""
+"""Redis Stream publisher/consumer. Falls back to an in-memory queue if Redis isn't around."""
 from __future__ import annotations
 import asyncio
 import json
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List
 
 import structlog
 

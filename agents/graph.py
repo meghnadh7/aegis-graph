@@ -1,8 +1,14 @@
-"""LangGraph supervisor graph that wires all 5 nodes with the reflector loop.
+"""The LangGraph supervisor graph.
 
-Each node is wrapped so any exception is logged into ``node_errors`` and the
-graph still proceeds. The reflector decides whether to revise (loop back to
-triage) or proceed to the reporter, bounded by ``MAX_REVISION_LOOPS``.
+Five nodes in sequence — triage, attack_mapper, investigator, reflector,
+reporter. The reflector decides whether to loop back (capped at
+MAX_REVISION_LOOPS) or hand off to the reporter. Every node call is wrapped
+in a try/except so a single broken tool doesn't kill the whole run; errors
+collect in `node_errors` and the case still gets a verdict.
+
+If `langgraph` isn't installed we fall back to a hand-rolled async runner
+that mirrors the same control flow — handy for CI environments where you
+don't want the full LangGraph install.
 """
 from __future__ import annotations
 import asyncio
@@ -80,10 +86,7 @@ def build_graph():
 
 
 class _FallbackRunner:
-    """Pure-asyncio fallback that mirrors the LangGraph control flow.
-
-    Used in environments where langgraph isn't installed (e.g., minimal CI).
-    """
+    """Asyncio runner that walks the same nodes when langgraph isn't installed."""
 
     async def ainvoke(self, state: TriageCase) -> TriageCase:
         for _ in range(MAX_REVISION_LOOPS + 1):

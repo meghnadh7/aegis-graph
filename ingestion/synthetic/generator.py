@@ -1,7 +1,8 @@
-"""Generate synthetic Wazuh-formatted alerts from technique templates.
+"""Builds Wazuh-shaped alerts off the templates in templates/.
 
-Distribution per technique: ~40% TP, 35% FP, 25% escalate. Field jitter (host
-names, IPs, hashes, timestamps) is seeded by alert_index for reproducibility.
+Per-technique label split is roughly 40/35/25 (TP/FP/escalate). Hostnames,
+IPs, hashes, timestamps are jittered, but the jitter is seeded so a given
+seed always produces the same alert — useful for reproducible evals.
 """
 from __future__ import annotations
 import hashlib

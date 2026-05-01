@@ -1,7 +1,12 @@
-"""Prompt-injection defense applied to every tool output before LLM ingestion."""
+"""Cleans up tool output / alert fields before they reach the LLM.
+
+Not a perfect defense — it's regex + truncation + a couple of escapes. But it
+catches the obvious "ignore previous instructions" stuff and keeps fields from
+running on long enough to hide a payload.
+"""
 from __future__ import annotations
 import re
-from typing import Dict, Any, List, Tuple
+from typing import Any, List, Tuple
 
 import structlog
 
@@ -32,15 +37,7 @@ _MAX_FIELD_LEN = 500
 
 
 class PromptInjectionGuard:
-    """Sanitize tool outputs before they enter LLM context.
-
-    Strategy:
-      1. Truncate each string field to MAX_FIELD_LEN.
-      2. Replace any matched injection pattern with a redaction marker.
-      3. Escape backticks and triple-quote sequences that could close out a
-         prompt code block.
-      4. Log every detection so it surfaces in LangSmith.
-    """
+    """Truncate, scrub for known injection patterns, then escape any code-block markers."""
 
     def __init__(self, max_field_len: int = _MAX_FIELD_LEN) -> None:
         self.max_field_len = max_field_len
@@ -64,7 +61,7 @@ class PromptInjectionGuard:
         return text
 
     def sanitize_dict(self, data: Any, max_depth: int = 3, _depth: int = 0, _path: str = "") -> Any:
-        """Recursively sanitize all string values in a nested dict/list."""
+        """Walk a dict/list and run sanitize() on every string we find."""
         if _depth > max_depth:
             return data
         if isinstance(data, dict):

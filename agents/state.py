@@ -1,4 +1,4 @@
-"""Shared state TypedDicts that flow through the LangGraph supervisor graph."""
+"""TypedDict shape for the case object that flows through every node."""
 from __future__ import annotations
 from typing import TypedDict, Optional, Literal, List, Dict, Any
 
@@ -85,7 +85,7 @@ class TriageCase(TypedDict, total=False):
 
 
 def empty_case(tenant_id: str, alert_id: str, raw_alert: Dict[str, Any]) -> TriageCase:
-    """Build a fresh TriageCase with sane defaults."""
+    """New blank case object the graph mutates as it goes."""
     from uuid import uuid4
     from datetime import datetime, timezone
     return TriageCase(

@@ -1,4 +1,4 @@
-"""Custom evaluators. LangSmith-compatible signature: (run, example) -> dict."""
+"""The evaluators we run against each case. LangSmith calls these with (run, example)."""
 from __future__ import annotations
 from typing import Any, Dict
 
@@ -42,7 +42,11 @@ def attack_mapping_accuracy_evaluator(run: Any, example: Any) -> Dict[str, Any]:
 
 
 def hallucination_evaluator(run: Any, example: Any) -> Dict[str, Any]:
-    """Heuristic: penalize claims in summary that aren't grounded in IOCs/enrichment."""
+    """Cheap heuristic: dock points if the summary uses unhedged absolutes.
+
+    Real grounding eval would be an LLM-as-judge call comparing each summary
+    claim back to the enrichment data. This is the budget version.
+    """
     out = _outputs(run)
     summary = (out.get("analyst_summary") or "").lower()
     iocs = out.get("extracted_iocs", []) or []

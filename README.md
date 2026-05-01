@@ -38,7 +38,7 @@ Tests:
 ```
 $ pytest tests/ -q
 ................                                                         [100%]
-16 passed in 1.51s
+16 passed in 1.56s
 ```
 
 Evaluation against the bundled 200-alert golden set (40 per technique × 5 techniques, evenly split across both tenants, ~40/35/25 TP/FP/escalate):
@@ -46,19 +46,20 @@ Evaluation against the bundled 200-alert golden set (40 per technique × 5 techn
 ```
 $ python -m evals.run_evals --concurrency 16
 === AegisGraph Eval Summary ===
-  verdict_accuracy:           {'mean': 0.995, 'median': 1.0,    'n': 200}
+  verdict_accuracy:           {'mean': 1.0,   'median': 1.0,    'n': 200}
   attack_mapping_accuracy:    {'mean': 0.50,  'median': 0.5,    'n': 200}
   hallucination_resistance:   {'mean': 1.0,   'median': 1.0,    'n': 200}
-  ioc_f1:                     {'mean': 0.634, 'median': 0.586,  'n': 200}
+  ioc_f1:                     {'mean': 0.80,  'median': 0.80,   'n': 200}
   cost_per_alert_usd:         {'mean': 0.014, 'median': 0.01,   'n': 200}
-  wall_time_seconds:          6.37
+  wall_time_seconds:          4.68
   alerts:                     200
 ```
 
 A few honest notes on those numbers:
 
-- The 0.995 verdict accuracy is on the synthetic dataset with the mock LLM. It tells you the wiring works and the rubric is consistent with itself; it does not tell you what a real Claude/GPT call would do on real noisy data.
+- 1.0 verdict accuracy is on the synthetic dataset with the mock LLM. It tells you the wiring works and the rubric is consistent with itself; it does not tell you what a real Claude/GPT call would do on real noisy data.
 - `attack_mapping_accuracy` plateaus at 0.5 because the mock LLM keeps hitting the parent-vs-subtechnique partial-credit case (e.g. predicts `T1003.001` when ground truth is `T1003`). With a real model this should close most of that gap.
+- `ioc_f1` of 0.80 is after fixing a bug where the mock LLM was scanning the entire prompt (including the enrichment payload) for IOCs and reporting URLs from the enrichment links as if they were alert IOCs. The mock now scopes its extraction to the alert section.
 - `hallucination_resistance` is a heuristic check that summaries don't contain unhedged absolutes like "definitely" or "confirmed exfiltration". Not a substitute for a real grounding eval.
 - $0.014/alert is simulated from token counts the mock LLM returns. Real cost depends on the model.
 

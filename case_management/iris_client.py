@@ -1,6 +1,6 @@
-"""DFIR-IRIS REST client. Mock-mode logs the would-be requests and returns a fake id."""
+"""DFIR-IRIS REST client. In mock mode we just log what would have been sent and return a fake id."""
 from __future__ import annotations
-from typing import Any, Dict, Optional
+from typing import Any, Dict
 from uuid import uuid4
 
 import httpx

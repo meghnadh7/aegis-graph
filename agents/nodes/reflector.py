@@ -1,4 +1,4 @@
-"""Reflector / critic node — scores the case and may force a revision loop."""
+"""LLM-as-judge over the case so far. Forces another lap if confidence is too low."""
 from __future__ import annotations
 import json
 import time

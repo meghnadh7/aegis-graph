@@ -1,4 +1,4 @@
-"""Reporter node — produces final verdict and writes case to DFIR-IRIS."""
+"""Final verdict + summary, then files everything into DFIR-IRIS."""
 from __future__ import annotations
 import json
 import time

@@ -1,4 +1,4 @@
-"""ATT&CK mapper node: HyDE retrieval + LLM ranking."""
+"""ATT&CK mapper. Uses HyDE so the embedding side has enough words to actually match."""
 from __future__ import annotations
 import json
 import time

@@ -1,8 +1,8 @@
 """Knowledge base ingestion.
 
-Real Pinecone backend is used when PINECONE_API_KEY is present. Otherwise an
-in-process vector store is used so the demo and evals run completely offline.
-The offline store is process-local and namespaced exactly like Pinecone.
+If a Pinecone key is configured we upsert there; otherwise we keep an
+in-process cosine-sim store with the same namespace layout, which is enough
+for the demo and the offline evals.
 """
 from __future__ import annotations
 import math
@@ -20,7 +20,7 @@ log = structlog.get_logger(__name__)
 
 
 class InMemoryVectorStore:
-    """Naive cosine-sim store keyed by namespace."""
+    """Dumb cosine-similarity store, keyed by namespace. Fine for a few thousand vectors."""
 
     def __init__(self) -> None:
         self._ns: Dict[str, List[Tuple[str, List[float], Dict[str, Any]]]] = {}

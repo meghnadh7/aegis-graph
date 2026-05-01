@@ -1,4 +1,4 @@
-"""Shared runtime config — env loading, mock-mode flag, LLM factory."""
+"""Reads .env, decides whether we're in mock mode, hands back the right LLM/embedder."""
 from __future__ import annotations
 import os
 from functools import lru_cache
@@ -50,7 +50,7 @@ def iris_keys_present() -> bool:
 
 @lru_cache(maxsize=1)
 def get_llm():
-    """Return a configured LangChain LLM, or a deterministic stub in mock mode."""
+    """Anthropic, OpenAI, or the mock — depending on MOCK_MODE and which keys are present."""
     if MOCK_MODE or not llm_keys_present():
         from agents.mock_llm import MockLLM
         return MockLLM()
@@ -63,7 +63,7 @@ def get_llm():
 
 @lru_cache(maxsize=1)
 def get_embedder():
-    """Return an embedding client or stub."""
+    """Same idea as get_llm() but for embeddings."""
     if MOCK_MODE or not llm_keys_present():
         from agents.mock_llm import MockEmbedder
         return MockEmbedder()

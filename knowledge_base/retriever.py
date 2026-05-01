@@ -1,4 +1,10 @@
-"""HyDE retriever: embed a hypothetical narrative, not the raw alert."""
+"""HyDE retriever.
+
+The trick: instead of embedding the (terse) alert directly, we ask the LLM
+to write the kind of paragraph an analyst would write about that alert, then
+embed *that*. ATT&CK descriptions are written in similar prose, so cosine
+similarity actually has something to bite on.
+"""
 from __future__ import annotations
 from typing import Any, Dict, List
 

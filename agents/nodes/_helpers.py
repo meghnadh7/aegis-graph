@@ -1,4 +1,4 @@
-"""Shared helpers for agent nodes."""
+"""Small utilities shared by the agent nodes."""
 from __future__ import annotations
 import json
 import re
@@ -10,9 +10,12 @@ _HASH_RE = re.compile(r"\b[a-fA-F0-9]{32,64}\b")
 _URL_RE = re.compile(r"https?://[^\s\"']+", re.IGNORECASE)
 _EMAIL_RE = re.compile(r"\b[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}\b", re.IGNORECASE)
 
+# Network/broadcast/loopback addresses that aren't useful as IOCs.
+_BAD_IPS = {"0.0.0.0", "255.255.255.255", "10.0.0.0", "192.168.0.0", "172.16.0.0"}
+
 
 def extract_iocs_from_alert(alert: Dict[str, Any]) -> List[Dict[str, Any]]:
-    """Walk an arbitrary alert dict and pull plausible IOCs."""
+    """Pull IPs / URLs / hashes / domains / emails out of an alert."""
     text = json.dumps(alert, default=str)
     iocs: List[Dict[str, Any]] = []
     seen = set()
@@ -36,8 +39,13 @@ def extract_iocs_from_alert(alert: Dict[str, Any]) -> List[Dict[str, Any]]:
         add("url", m.group(0).rstrip(".,;)\""), "alert")
     for m in _IP_RE.finditer(text):
         ip = m.group(0)
-        if ip.startswith(("0.", "127.", "255.255")):
+        if ip.startswith(("0.", "127.", "255.255")) or ip in _BAD_IPS:
             continue
+        # /16 broadcast like 10.0.0.0 — covers RFC1918 zero-host addresses we keep seeing.
+        if ip.endswith(".0.0") or ip.endswith(".0"):
+            # allow .0 only if it's clearly a real host (last octet 0 is rare for endpoints).
+            if ip.endswith(".0.0"):
+                continue
         add("ip", ip, "alert")
     for m in _HASH_RE.finditer(text):
         v = m.group(0)
@@ -59,7 +67,7 @@ def extract_iocs_from_alert(alert: Dict[str, Any]) -> List[Dict[str, Any]]:
 
 
 def alert_summary(alert: Dict[str, Any]) -> str:
-    """Compact, human-readable single-line-ish summary of the alert."""
+    """One-line-ish summary of the alert, used for HyDE retrieval prompts."""
     rule = alert.get("rule", {})
     data = alert.get("data", {})
     agent = alert.get("agent", {})

@@ -1,4 +1,4 @@
-"""Investigator node: build timeline + assess asset criticality."""
+"""Investigator — pivots on host/user/IP against recent history and tags asset criticality."""
 from __future__ import annotations
 import json
 import time
@@ -17,7 +17,9 @@ from ._helpers import alert_summary
 log = structlog.get_logger(__name__)
 
 
-# Process-local "event history" so the investigator has something to pivot on.
+# In a real deployment this would be Redis or a SIEM query; for the demo
+# we just keep the last few hundred events per tenant in memory so the
+# investigator has *something* to pivot on across alerts.
 _EVENT_HISTORY: Dict[str, List[Dict[str, Any]]] = {}
 
 

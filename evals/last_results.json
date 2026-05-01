@@ -1,7 +1,7 @@
 {
   "summary": {
     "verdict_accuracy": {
-      "mean": 0.995,
+      "mean": 1.0,
       "median": 1.0,
       "n": 200
     },
@@ -16,16 +16,16 @@
       "n": 200
     },
     "ioc_f1": {
-      "mean": 0.6338,
-      "median": 0.5857,
+      "mean": 0.7996,
+      "median": 0.8,
       "n": 200
     },
     "cost_per_alert_usd": {
-      "mean": 0.0143,
+      "mean": 0.0136,
       "median": 0.01,
       "n": 200
     },
-    "wall_time_seconds": 6.37,
+    "wall_time_seconds": 4.68,
     "alerts": 200
   },
   "rows": [
@@ -51,8 +51,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -64,8 +64,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
@@ -103,8 +103,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
@@ -116,7 +116,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
+        "ioc_f1": 0.8,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -130,7 +130,7 @@
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
         "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.024000000000000004
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -142,8 +142,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
@@ -168,8 +168,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
-        "cost_per_alert_usd": 0.024000000000000004
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -181,8 +181,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.024000000000000004
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -207,7 +207,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
+        "ioc_f1": 1.0,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -220,8 +220,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -246,7 +246,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.4,
+        "ioc_f1": 0.5,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -272,7 +272,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
+        "ioc_f1": 0.8,
         "cost_per_alert_usd": 0.017
       }
     },
@@ -285,8 +285,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -298,7 +298,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
+        "ioc_f1": 0.8,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -311,8 +311,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -324,8 +324,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
@@ -337,7 +337,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
+        "ioc_f1": 1.0,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -350,8 +350,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
-        "cost_per_alert_usd": 0.024000000000000004
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -363,8 +363,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
-        "cost_per_alert_usd": 0.017
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -376,8 +376,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
-        "cost_per_alert_usd": 0.017
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -402,8 +402,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
-        "cost_per_alert_usd": 0.024000000000000004
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -415,7 +415,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
+        "ioc_f1": 1.0,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -428,8 +428,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
@@ -441,7 +441,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
+        "ioc_f1": 1.0,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -454,8 +454,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
-        "cost_per_alert_usd": 0.017
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
@@ -467,8 +467,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.024000000000000004
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -480,8 +480,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -494,7 +494,7 @@
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
         "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.017
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -506,7 +506,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
+        "ioc_f1": 0.8,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -519,8 +519,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
-        "cost_per_alert_usd": 0.017
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
@@ -532,7 +532,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
+        "ioc_f1": 0.8,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -545,8 +545,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.017
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
@@ -558,8 +558,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.33333333333333337,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 0.4444444444444445,
+        "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
@@ -571,8 +571,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.4444444444444445,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 0.5,
+        "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
@@ -585,7 +585,7 @@
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.017
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -597,7 +597,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
+        "ioc_f1": 1.0,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -636,8 +636,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.4444444444444445,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -649,8 +649,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.3636363636363636,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 0.5,
+        "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
@@ -662,8 +662,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.33333333333333337,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 0.4444444444444445,
+        "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
@@ -675,7 +675,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
+        "ioc_f1": 1.0,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -688,8 +688,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.4,
-        "cost_per_alert_usd": 0.024000000000000004
+        "ioc_f1": 0.4444444444444445,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -701,8 +701,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -728,7 +728,7 @@
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.024000000000000004
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -740,8 +740,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
-        "cost_per_alert_usd": 0.024000000000000004
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -753,8 +753,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
@@ -766,7 +766,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
+        "ioc_f1": 0.8,
         "cost_per_alert_usd": 0.017
       }
     },
@@ -792,8 +792,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
-        "cost_per_alert_usd": 0.017
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -806,7 +806,7 @@
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.024000000000000004
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -818,7 +818,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.3076923076923077,
+        "ioc_f1": 0.4444444444444445,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -844,7 +844,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
+        "ioc_f1": 0.8,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -857,7 +857,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.4444444444444445,
+        "ioc_f1": 0.5,
         "cost_per_alert_usd": 0.024000000000000004
       }
     },
@@ -870,7 +870,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.3636363636363636,
+        "ioc_f1": 0.4444444444444445,
         "cost_per_alert_usd": 0.024000000000000004
       }
     },
@@ -909,8 +909,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
-        "cost_per_alert_usd": 0.024000000000000004
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -922,7 +922,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.33333333333333337,
+        "ioc_f1": 0.4444444444444445,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -935,8 +935,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
@@ -948,7 +948,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
+        "ioc_f1": 0.8,
         "cost_per_alert_usd": 0.017
       }
     },
@@ -961,7 +961,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.3636363636363636,
+        "ioc_f1": 0.5,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -974,8 +974,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.017
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
@@ -987,7 +987,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.4,
+        "ioc_f1": 0.5,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -1000,8 +1000,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
@@ -1013,8 +1013,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.4,
-        "cost_per_alert_usd": 0.024000000000000004
+        "ioc_f1": 0.5,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -1026,8 +1026,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.3636363636363636,
-        "cost_per_alert_usd": 0.024000000000000004
+        "ioc_f1": 0.4444444444444445,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -1039,7 +1039,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.3636363636363636,
+        "ioc_f1": 0.5,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -1052,8 +1052,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.017
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -1065,8 +1065,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.017
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -1078,8 +1078,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
-        "cost_per_alert_usd": 0.024000000000000004
+        "ioc_f1": 0.6666666666666666,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -1092,7 +1092,7 @@
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 0.7499999999999999,
-        "cost_per_alert_usd": 0.024000000000000004
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -1104,8 +1104,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5454545454545454,
-        "cost_per_alert_usd": 0.024000000000000004
+        "ioc_f1": 0.8571428571428571,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -1117,7 +1117,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6,
+        "ioc_f1": 0.7499999999999999,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -1130,7 +1130,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
+        "ioc_f1": 0.6666666666666666,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -1143,8 +1143,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.7499999999999999,
-        "cost_per_alert_usd": 0.017
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
@@ -1156,8 +1156,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6,
-        "cost_per_alert_usd": 0.024000000000000004
+        "ioc_f1": 0.8571428571428571,
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -1169,7 +1169,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
+        "ioc_f1": 1.0,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -1195,8 +1195,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -1208,8 +1208,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.7499999999999999,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 0.8571428571428571,
+        "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
@@ -1221,7 +1221,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
+        "ioc_f1": 1.0,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -1247,7 +1247,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6,
+        "ioc_f1": 0.7499999999999999,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -1260,8 +1260,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 0.8571428571428571,
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -1274,19 +1274,19 @@
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.024000000000000004
+        "cost_per_alert_usd": 0.01
       }
     },
     {
       "alert_id": "AL-6E9322C008",
       "tenant_id": "tenant_a",
       "expected": "true_positive",
-      "predicted": "false_positive",
+      "predicted": "true_positive",
       "evals": {
-        "verdict_accuracy": 0.0,
+        "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.4615384615384615,
+        "ioc_f1": 0.6666666666666666,
         "cost_per_alert_usd": 0.024000000000000004
       }
     },
@@ -1299,7 +1299,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.7499999999999999,
+        "ioc_f1": 1.0,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -1312,8 +1312,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5454545454545454,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 0.6666666666666666,
+        "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
@@ -1325,7 +1325,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
+        "ioc_f1": 0.7499999999999999,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -1351,8 +1351,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.7499999999999999,
-        "cost_per_alert_usd": 0.017
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -1364,7 +1364,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
+        "ioc_f1": 0.8571428571428571,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -1377,8 +1377,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5454545454545454,
-        "cost_per_alert_usd": 0.024000000000000004
+        "ioc_f1": 0.7499999999999999,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -1390,7 +1390,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6,
+        "ioc_f1": 0.8571428571428571,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -1403,8 +1403,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5454545454545454,
-        "cost_per_alert_usd": 0.024000000000000004
+        "ioc_f1": 0.7499999999999999,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -1416,8 +1416,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6,
-        "cost_per_alert_usd": 0.024000000000000004
+        "ioc_f1": 0.6666666666666666,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -1442,8 +1442,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5454545454545454,
-        "cost_per_alert_usd": 0.024000000000000004
+        "ioc_f1": 0.8571428571428571,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -1455,7 +1455,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5454545454545454,
+        "ioc_f1": 0.7499999999999999,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -1468,7 +1468,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5454545454545454,
+        "ioc_f1": 0.6666666666666666,
         "cost_per_alert_usd": 0.024000000000000004
       }
     },
@@ -1481,8 +1481,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
@@ -1494,7 +1494,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5454545454545454,
+        "ioc_f1": 0.6666666666666666,
         "cost_per_alert_usd": 0.024000000000000004
       }
     },
@@ -1507,8 +1507,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.017
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -1520,8 +1520,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 0.8571428571428571,
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -1534,7 +1534,7 @@
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 0.7499999999999999,
-        "cost_per_alert_usd": 0.017
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -1546,7 +1546,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5454545454545454,
+        "ioc_f1": 0.6666666666666666,
         "cost_per_alert_usd": 0.024000000000000004
       }
     },
@@ -1560,7 +1560,7 @@
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -1572,7 +1572,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
+        "ioc_f1": 0.8571428571428571,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -1598,8 +1598,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
-        "cost_per_alert_usd": 0.024000000000000004
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -1611,8 +1611,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
-        "cost_per_alert_usd": 0.017
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -1624,8 +1624,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
-        "cost_per_alert_usd": 0.017
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -1637,8 +1637,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
-        "cost_per_alert_usd": 0.017
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -1651,7 +1651,7 @@
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.017
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -1663,7 +1663,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
+        "ioc_f1": 1.0,
         "cost_per_alert_usd": 0.017
       }
     },
@@ -1676,8 +1676,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -1689,7 +1689,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
+        "ioc_f1": 1.0,
         "cost_per_alert_usd": 0.017
       }
     },
@@ -1702,8 +1702,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
-        "cost_per_alert_usd": 0.017
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -1716,7 +1716,7 @@
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.017
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -1728,7 +1728,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
+        "ioc_f1": 0.8,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -1767,7 +1767,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
+        "ioc_f1": 1.0,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -1780,7 +1780,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
+        "ioc_f1": 0.8,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -1793,8 +1793,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -1807,7 +1807,7 @@
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
+        "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
@@ -1819,8 +1819,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.017
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -1832,8 +1832,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -1845,7 +1845,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
+        "ioc_f1": 1.0,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -1858,8 +1858,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
-        "cost_per_alert_usd": 0.017
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -1871,7 +1871,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
+        "ioc_f1": 1.0,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -1897,7 +1897,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
+        "ioc_f1": 1.0,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -1911,7 +1911,7 @@
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.024000000000000004
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -1923,8 +1923,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
@@ -1936,8 +1936,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
-        "cost_per_alert_usd": 0.017
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -1949,7 +1949,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
+        "ioc_f1": 1.0,
         "cost_per_alert_usd": 0.017
       }
     },
@@ -1963,7 +1963,7 @@
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.017
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -1975,8 +1975,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.024000000000000004
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -2002,7 +2002,7 @@
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -2014,7 +2014,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
+        "ioc_f1": 0.8,
         "cost_per_alert_usd": 0.017
       }
     },
@@ -2027,7 +2027,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
+        "ioc_f1": 1.0,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -2040,7 +2040,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
+        "ioc_f1": 0.8,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -2054,7 +2054,7 @@
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.017
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -2067,7 +2067,7 @@
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.017
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -2092,8 +2092,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
-        "cost_per_alert_usd": 0.017
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -2106,7 +2106,7 @@
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.017
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -2144,8 +2144,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
-        "cost_per_alert_usd": 0.024000000000000004
+        "ioc_f1": 0.6666666666666666,
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -2157,7 +2157,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.4444444444444445,
+        "ioc_f1": 0.6666666666666666,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -2170,8 +2170,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.4444444444444445,
-        "cost_per_alert_usd": 0.024000000000000004
+        "ioc_f1": 0.6666666666666666,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -2183,8 +2183,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
-        "cost_per_alert_usd": 0.017
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -2196,7 +2196,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.4444444444444445,
+        "ioc_f1": 0.6666666666666666,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -2209,8 +2209,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -2223,7 +2223,7 @@
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.024000000000000004
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -2235,7 +2235,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
+        "ioc_f1": 0.6666666666666666,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -2261,8 +2261,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 0.6666666666666666,
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -2287,8 +2287,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.4444444444444445,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 0.6666666666666666,
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -2301,7 +2301,7 @@
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.01
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -2326,8 +2326,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 0.6666666666666666,
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -2353,7 +2353,7 @@
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.024000000000000004
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -2365,7 +2365,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
+        "ioc_f1": 0.8,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -2378,8 +2378,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
-        "cost_per_alert_usd": 0.017
+        "ioc_f1": 0.6666666666666666,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -2392,7 +2392,7 @@
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -2417,8 +2417,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -2430,7 +2430,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.4444444444444445,
+        "ioc_f1": 0.5714285714285715,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -2443,7 +2443,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
+        "ioc_f1": 0.8,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -2456,7 +2456,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.4444444444444445,
+        "ioc_f1": 0.5714285714285715,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -2469,8 +2469,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
-        "cost_per_alert_usd": 0.017
+        "ioc_f1": 0.6666666666666666,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -2482,8 +2482,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
-        "cost_per_alert_usd": 0.024000000000000004
+        "ioc_f1": 0.6666666666666666,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -2495,8 +2495,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.4444444444444445,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 0.6666666666666666,
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -2509,7 +2509,7 @@
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.024000000000000004
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -2522,7 +2522,7 @@
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.017
+        "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
@@ -2534,7 +2534,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.4,
+        "ioc_f1": 0.5714285714285715,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -2573,8 +2573,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
-        "cost_per_alert_usd": 0.017
+        "ioc_f1": 0.6666666666666666,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
@@ -2586,8 +2586,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 0.6666666666666666,
+        "cost_per_alert_usd": 0.017
       }
     },
     {
@@ -2599,7 +2599,7 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
+        "ioc_f1": 0.8,
         "cost_per_alert_usd": 0.01
       }
     },
@@ -2612,8 +2612,8 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
-        "cost_per_alert_usd": 0.017
+        "ioc_f1": 0.6666666666666666,
+        "cost_per_alert_usd": 0.01
       }
     },
     {

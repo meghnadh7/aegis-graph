@@ -1,4 +1,4 @@
-"""Triage node: extract IOCs, parallel-enrich via 5 MCP servers."""
+"""Triage node — pulls IOCs out of the alert and fans them out to all 5 TI sources at once."""
 from __future__ import annotations
 import asyncio
 import json
@@ -14,7 +14,7 @@ from agents.state import TriageCase
 from guardrails import PromptInjectionGuard
 from mcp_servers import VirusTotalMCP, ShodanMCP, AbuseIPDBMCP, URLhausMCP, GreyNoiseMCP
 from tenants.config import load_tenant
-from ._helpers import extract_iocs_from_alert, alert_summary
+from ._helpers import extract_iocs_from_alert
 
 log = structlog.get_logger(__name__)
 
@@ -98,7 +98,7 @@ async def triage_node(state: TriageCase) -> Dict[str, Any]:
 
 
 def _flag_iocs_from_enrichment(iocs: List[Dict[str, Any]], enrichments: List[Dict[str, Any]]) -> None:
-    """Mark an IOC as malicious if any enrichment reports it as suspicious."""
+    """Walk the enrichment results and mark IOCs malicious when any TI source flags them."""
     by_value = {i["value"]: i for i in iocs}
     for e in enrichments:
         if not e.get("success"):
@@ -131,7 +131,12 @@ def _flag_iocs_from_enrichment(iocs: List[Dict[str, Any]], enrichments: List[Dic
 
 
 def _enrichment_relates(data: Dict[str, Any], ioc_value: str) -> bool:
-    """Best-effort check that this enrichment payload corresponds to this IOC."""
+    """Rough match: did this enrichment record actually mention this IOC?
+
+    Not perfect — we don't track which task ran for which IOC at the call site
+    yet, so we fall back to a substring check on the JSON dump. Small payloads
+    are treated as "probably related" since most TI responses are short.
+    """
     if not data:
         return True
     blob = json.dumps(data, default=str)

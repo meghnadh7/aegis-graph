@@ -1,6 +1,6 @@
-"""Pydantic models used as structured-output schemas for LLM calls."""
+"""Pydantic models we hand to .with_structured_output() so the LLM returns typed dicts."""
 from __future__ import annotations
-from typing import List, Optional, Literal, Dict, Any
+from typing import List, Literal, Dict, Any
 from pydantic import BaseModel, Field
 
 

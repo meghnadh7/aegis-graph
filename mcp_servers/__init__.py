@@ -1,8 +1,8 @@
-"""MCP-style threat-intel servers wrapping VirusTotal, Shodan, AbuseIPDB, URLhaus, GreyNoise.
+"""Threat-intel MCP servers (VirusTotal, Shodan, AbuseIPDB, URLhaus, GreyNoise).
 
-In MOCK_MODE every server returns deterministic fake data so the entire pipeline
-runs offline. When real keys are set and MOCK_MODE=false, the same interface
-makes real HTTP calls with retry + caching.
+Same interface for all five. In mock mode they return seeded fake responses;
+with real keys + MOCK_MODE=false they make real HTTP calls behind retries
+and a TTL cache.
 """
 from .virustotal import VirusTotalMCP
 from .shodan import ShodanMCP
