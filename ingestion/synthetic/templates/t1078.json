@@ -1,0 +1,59 @@
+{
+  "technique_id": "T1078",
+  "technique_name": "Valid Accounts",
+  "tactic": "Initial Access",
+  "rule_id_pool": ["60103", "60104", "60105"],
+  "variants": [
+    {
+      "label": "escalate",
+      "level": 10,
+      "description": "After-hours admin login from new geography",
+      "image": "C:\\Windows\\System32\\winlogon.exe",
+      "command_line": "winlogon.exe interactive",
+      "parent_image": "C:\\Windows\\System32\\smss.exe",
+      "user": "domainadmin",
+      "ip": "203.0.113.42",
+      "url": ""
+    },
+    {
+      "label": "true_positive",
+      "level": 12,
+      "description": "Multiple failed logins followed by success from blacklisted IP",
+      "image": "C:\\Windows\\System32\\winlogon.exe",
+      "command_line": "winlogon.exe interactive",
+      "parent_image": "C:\\Windows\\System32\\smss.exe",
+      "user": "svc_finance",
+      "ip": "198.51.100.199"
+    },
+    {
+      "label": "true_positive",
+      "level": 11,
+      "description": "Impossible travel: account login from two countries within one hour",
+      "image": "C:\\Windows\\System32\\lsass.exe",
+      "command_line": "lsass.exe",
+      "parent_image": "C:\\Windows\\System32\\wininit.exe",
+      "user": "alice",
+      "ip": "203.0.113.55"
+    },
+    {
+      "label": "false_positive",
+      "level": 5,
+      "description": "VPN login from registered home IP",
+      "image": "C:\\Program Files\\Cisco\\AnyConnect\\vpnui.exe",
+      "command_line": "vpnui.exe connect",
+      "parent_image": "C:\\Windows\\explorer.exe",
+      "user": "bob",
+      "ip": "10.10.10.5"
+    },
+    {
+      "label": "false_positive",
+      "level": 4,
+      "description": "Scheduled backup service login",
+      "image": "C:\\Windows\\System32\\winlogon.exe",
+      "command_line": "winlogon.exe service",
+      "parent_image": "C:\\Windows\\System32\\smss.exe",
+      "user": "svc_backup",
+      "ip": "10.0.0.5"
+    }
+  ]
+}

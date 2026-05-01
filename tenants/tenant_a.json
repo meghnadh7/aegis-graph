@@ -1,0 +1,15 @@
+{
+  "tenant_id": "tenant_a",
+  "tenant_name": "FinTech Corp",
+  "description": "A financial technology company handling payment processing and customer PII. PCI-DSS compliant environment.",
+  "environment": "AWS cloud (us-east-1). Windows workstations, Linux servers, Kubernetes clusters.",
+  "critical_assets": ["payment-processor-01", "db-master-01", "auth-server-01", "pci-vault-01"],
+  "suppression_rules": [
+    "Suppress port scans from 10.0.0.0/8",
+    "Suppress scheduled task alerts on backup servers between 02:00-04:00 UTC"
+  ],
+  "iris_customer_id": 1,
+  "pinecone_namespace_prefix": "tenant_a",
+  "alert_volume_per_day": 450,
+  "primary_contact": "soc@fintechcorp.example.com"
+}

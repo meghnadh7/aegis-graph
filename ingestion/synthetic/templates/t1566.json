@@ -1,0 +1,55 @@
+{
+  "technique_id": "T1566",
+  "technique_name": "Phishing",
+  "tactic": "Initial Access",
+  "rule_id_pool": ["88001", "88002", "88003"],
+  "variants": [
+    {
+      "label": "escalate",
+      "level": 10,
+      "description": "Macro-enabled Office document opened from email",
+      "image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
+      "command_line": "WINWORD.EXE /n \"C:\\Users\\alice\\Downloads\\Invoice-04302026.docm\"",
+      "parent_image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\OUTLOOK.EXE",
+      "user": "alice",
+      "url": "http://phish.example.com/invoice.docm"
+    },
+    {
+      "label": "true_positive",
+      "level": 13,
+      "description": "Office spawning cmd.exe (macro)",
+      "image": "C:\\Windows\\System32\\cmd.exe",
+      "command_line": "cmd.exe /c powershell -nop -w hidden -e <b64>",
+      "parent_image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
+      "user": "alice"
+    },
+    {
+      "label": "true_positive",
+      "level": 11,
+      "description": "Suspicious LNK attachment opened",
+      "image": "C:\\Windows\\explorer.exe",
+      "command_line": "C:\\Users\\bob\\Downloads\\invoice.lnk",
+      "parent_image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\OUTLOOK.EXE",
+      "user": "bob",
+      "hash": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08"
+    },
+    {
+      "label": "false_positive",
+      "level": 4,
+      "description": "Known business newsletter link clicked",
+      "image": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "command_line": "chrome.exe https://newsletter.partner.example.com/april",
+      "parent_image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\OUTLOOK.EXE",
+      "user": "carol"
+    },
+    {
+      "label": "false_positive",
+      "level": 5,
+      "description": "Internal HR document open from corp portal",
+      "image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
+      "command_line": "WINWORD.EXE \"\\\\corp.local\\hr\\benefits-2026.docx\"",
+      "parent_image": "C:\\Windows\\explorer.exe",
+      "user": "dave"
+    }
+  ]
+}

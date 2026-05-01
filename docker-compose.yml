@@ -1,0 +1,61 @@
+version: "3.9"
+
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+  iris-db:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: iris
+      POSTGRES_USER: iris
+      POSTGRES_PASSWORD: iris
+    volumes:
+      - iris-db-data:/var/lib/postgresql/data
+
+  iris:
+    image: ghcr.io/dfir-iris/iriswebapp:latest
+    depends_on:
+      - iris-db
+    environment:
+      POSTGRES_HOST: iris-db
+      POSTGRES_USER: iris
+      POSTGRES_PASSWORD: iris
+      POSTGRES_DB: iris
+    ports:
+      - "8000:8000"
+
+  aegisgraph-api:
+    build: .
+    depends_on:
+      redis:
+        condition: service_healthy
+    env_file:
+      - .env
+    environment:
+      REDIS_URL: redis://redis:6379
+      IRIS_URL: http://iris:8000
+    ports:
+      - "8080:8080"
+
+  aegisgraph-worker:
+    build: .
+    depends_on:
+      redis:
+        condition: service_healthy
+    env_file:
+      - .env
+    environment:
+      REDIS_URL: redis://redis:6379
+      IRIS_URL: http://iris:8000
+    command: ["python", "-m", "evals.run_evals", "--limit", "20"]
+
+volumes:
+  iris-db-data:

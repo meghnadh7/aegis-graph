@@ -1,0 +1,15 @@
+{
+  "tenant_id": "tenant_b",
+  "tenant_name": "Healthcare LLC",
+  "description": "A regional healthcare provider with HIPAA compliance requirements. Patient data is highly sensitive.",
+  "environment": "On-premise VMware environment with some Azure integration. Mix of Windows and Linux.",
+  "critical_assets": ["ehr-server-01", "radiology-pacs-01", "ad-dc-01", "backup-nas-01"],
+  "suppression_rules": [
+    "Suppress antivirus update alerts",
+    "Suppress Windows Defender scheduled scan events"
+  ],
+  "iris_customer_id": 2,
+  "pinecone_namespace_prefix": "tenant_b",
+  "alert_volume_per_day": 280,
+  "primary_contact": "security@healthcarellc.example.com"
+}

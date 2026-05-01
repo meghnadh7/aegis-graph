@@ -1,0 +1,21 @@
+version: "3.9"
+
+# Development overlay: just Redis + the API container with code mounted for hot-reload.
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+
+  aegisgraph-api:
+    build: .
+    env_file:
+      - .env
+    environment:
+      MOCK_MODE: "true"
+      REDIS_URL: redis://redis:6379
+    volumes:
+      - .:/app
+    ports:
+      - "8080:8080"
+    command: ["python", "-m", "uvicorn", "ingestion.webhook:app", "--host", "0.0.0.0", "--port", "8080", "--reload"]

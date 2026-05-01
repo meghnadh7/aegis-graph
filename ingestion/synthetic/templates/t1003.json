@@ -1,0 +1,53 @@
+{
+  "technique_id": "T1003",
+  "technique_name": "OS Credential Dumping",
+  "tactic": "Credential Access",
+  "rule_id_pool": ["92010", "92011", "92012"],
+  "variants": [
+    {
+      "label": "true_positive",
+      "level": 13,
+      "description": "Mimikatz credential dumping detected",
+      "image": "C:\\Users\\Public\\mimikatz.exe",
+      "command_line": "mimikatz.exe sekurlsa::logonpasswords",
+      "parent_image": "C:\\Windows\\System32\\cmd.exe",
+      "user": "attacker"
+    },
+    {
+      "label": "escalate",
+      "level": 12,
+      "description": "ProcDump LSASS memory dump",
+      "image": "C:\\Tools\\procdump64.exe",
+      "command_line": "procdump.exe -accepteula -ma lsass.exe C:\\temp\\lsass.dmp",
+      "parent_image": "C:\\Windows\\System32\\cmd.exe",
+      "user": "domainadmin"
+    },
+    {
+      "label": "true_positive",
+      "level": 13,
+      "description": "Suspicious LSASS handle access from unsigned binary",
+      "image": "C:\\Users\\Public\\loader.exe",
+      "command_line": "loader.exe --target lsass --read",
+      "parent_image": "C:\\Windows\\explorer.exe",
+      "user": "jdoe"
+    },
+    {
+      "label": "escalate",
+      "level": 11,
+      "description": "reg save HKLM\\SAM detected",
+      "image": "C:\\Windows\\System32\\reg.exe",
+      "command_line": "reg save HKLM\\SAM C:\\temp\\sam.hive",
+      "parent_image": "C:\\Windows\\System32\\cmd.exe",
+      "user": "svc_backup"
+    },
+    {
+      "label": "false_positive",
+      "level": 6,
+      "description": "Task Manager LSASS dump during IT maintenance",
+      "image": "C:\\Windows\\System32\\Taskmgr.exe",
+      "command_line": "taskmgr.exe",
+      "parent_image": "C:\\Windows\\explorer.exe",
+      "user": "it_helpdesk"
+    }
+  ]
+}
