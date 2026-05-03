@@ -81,6 +81,11 @@ def ioc_extraction_evaluator(run: Any, example: Any) -> Dict[str, Any]:
 
 
 def cost_efficiency_evaluator(run: Any, example: Any) -> Dict[str, Any]:
+    """Cost per alert in USD. Only meaningful with a real LLM — when MOCK_MODE
+    is on the per-node `cost` is a placeholder constant, so this evaluator is
+    excluded from ALL_EVALUATORS by default. Add it back to the list when
+    running against real Claude.
+    """
     out = _outputs(run)
     cost = float(out.get("total_cost_usd", 0.0))
     return {"key": "cost_per_alert_usd", "score": cost}
@@ -91,5 +96,4 @@ ALL_EVALUATORS = [
     attack_mapping_accuracy_evaluator,
     hallucination_evaluator,
     ioc_extraction_evaluator,
-    cost_efficiency_evaluator,
 ]

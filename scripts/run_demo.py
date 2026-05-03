@@ -191,9 +191,9 @@ async def main() -> int:
     meta = Table(show_header=False, box=None, padding=(0, 1))
     meta.add_column(style="bold")
     meta.add_column()
-    meta.add_row("processing_time_ms", str(case.get("processing_time_ms")))
-    meta.add_row("wall time", f"{elapsed:.2f}s")
-    meta.add_row("cost (USD, simulated)", f"${case.get('total_cost_usd', 0):.4f}")
+    mock = os.getenv("MOCK_MODE", "true").lower() in {"1", "true", "yes", "on"}
+    wall_note = "(mocked TI + LLM; expect ~30s with real APIs)" if mock else "(real APIs)"
+    meta.add_row("wall time", f"{elapsed:.2f}s  [dim]{wall_note}[/]")
     meta.add_row("node errors", str(case.get("node_errors") or "none"))
     if os.getenv("LANGCHAIN_TRACING_V2", "").lower() == "true":
         meta.add_row("langsmith project", os.getenv("LANGCHAIN_PROJECT", "aegisgraph"))

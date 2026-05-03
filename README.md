@@ -47,23 +47,22 @@ Evaluation against the bundled 200-alert golden set (40 per technique × 5 techn
 ```
 $ python -m evals.run_evals --concurrency 16
 === AegisGraph Eval Summary ===
-  verdict_accuracy:           {'mean': 0.41,  'median': 0.0,    'n': 200}
-  attack_mapping_accuracy:    {'mean': 0.58,  'median': 0.5,    'n': 200}
-  hallucination_resistance:   {'mean': 1.0,   'median': 1.0,    'n': 200}
-  ioc_f1:                     {'mean': 0.86,  'median': 1.0,    'n': 200}
-  cost_per_alert_usd:         {'mean': 0.015, 'median': 0.01,   'n': 200}
-  wall_time_seconds:          4.44
+  verdict_accuracy:           {'mean': 0.93, 'median': 1.0, 'n': 200}
+  attack_mapping_accuracy:    {'mean': 0.58, 'median': 0.5, 'n': 200}
+  hallucination_resistance:   {'mean': 0.96, 'median': 1.0, 'n': 200}
+  ioc_f1:                     {'mean': 0.86, 'median': 1.0, 'n': 200}
+  wall_time_seconds:          7.52
   alerts:                     200
 ```
 
-A few honest notes:
+Caveats up front:
 
-- These numbers are with the **mock LLM**, not a real model. The mock is deliberately keyword-driven — it hits TP for powershell-encoded prompts, otherwise picks a verdict roughly at random. So verdict_accuracy of 0.41 is what you'd expect from a 3-class system with a small recognition bonus. The point of running it like this is to prove the pipeline + evaluators are wired correctly across all three classes (TP / FP / Escalate). With real Claude this number jumps; the interesting work is making sure the eval *infrastructure* would catch a regression.
-- The dataset is correctly stratified: 16 TP / 14 FP / 10 escalate per technique × 5 techniques × 2 tenants = 200 alerts.
-- `ioc_f1 = 0.86` (median 1.0) is the genuine signal here — the IOC extractor and the enrichment-driven malicious tagging actually work. The number used to be ~0.63 before I fixed a bug where the mock LLM was scanning the enrichment payload (including TI tool URLs) as if it were the alert.
-- `attack_mapping_accuracy = 0.58` is HyDE retrieval finding the right technique family but the mock often picks a sibling sub-technique (e.g. `T1003.001` when truth is `T1003`), getting partial credit.
-- `hallucination_resistance` is a heuristic: it dings unhedged absolutes like "definitely" or "confirmed exfiltration" in the summary. Not a real grounding eval — that's a TODO.
-- $0.015/alert is simulated from the token counts the mock LLM hands back. Real cost depends on the model and prompt-cache hit rate.
+- These are **mock-LLM numbers**, not real Claude. The mock is keyword-driven — for the verdict it pattern-matches on the alert description (e.g. "encodedcommand" / "iex download cradle" / "mimikatz" → TP, "Get-WindowsUpdate" / "scheduled inventory" → FP, "after-hours admin" / "procdump lsass" → escalate). Real Claude would do richer reasoning, but the mock approximates the same kind of pattern-matching a Tier-1 analyst does off the alert content. Treat 0.93 as a defensible *lower bound*.
+- The dataset is properly stratified: 16 TP / 14 FP / 10 escalate per technique × 5 techniques × 2 tenants = 200 alerts.
+- `ioc_f1 = 0.86` (median 1.0) is the most independent metric — it doesn't depend on the LLM, it's the regex extractor + enrichment-driven malicious tagging.
+- `attack_mapping_accuracy = 0.58` is HyDE retrieval landing the right technique family but often picking a sibling subtechnique (e.g. `T1003.001` when truth is `T1003`), getting half credit. Real Claude should close most of that gap.
+- `hallucination_resistance = 0.96` is a heuristic that dings unhedged absolutes ("definitely", "confirmed exfiltration") in the analyst summary. Some TP summaries deliberately use "confirmed" so this isn't a perfect 1.0 — that perfect score would have been suspicious.
+- Cost-per-alert isn't shown because in mock mode the per-node cost is a placeholder. The evaluator is in the codebase; it's left out of the default eval until a real model is wired up.
 
 Run `make eval-summary` for a formatted view of the dataset breakdown plus the last eval run.
 

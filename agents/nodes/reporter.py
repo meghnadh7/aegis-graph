@@ -34,8 +34,16 @@ async def reporter_node(state: TriageCase) -> Dict[str, Any]:
         meta = runbooks[0].get("metadata", {})
         runbook_excerpt = (meta.get("title", "") + "\n" + meta.get("body", ""))[:1200]
 
+    # Include the bits of the raw alert the reporter actually needs to decide
+    # the verdict — the rule description and the command line. Without these
+    # in the prompt the LLM is reasoning from IOCs and ATT&CK tags alone.
+    raw = state.get("raw_alert") or {}
+    rule = raw.get("rule") or {}
+    evd = raw.get("data", {}).get("win", {}).get("eventdata", {}) if isinstance(raw.get("data"), dict) else {}
     case_summary = {
         "alert_id": state.get("alert_id"),
+        "alert_description": rule.get("description"),
+        "command_line": (evd.get("commandLine") or "")[:300],
         "severity": state.get("severity"),
         "extracted_iocs": state.get("extracted_iocs", [])[:10],
         "attack_techniques": state.get("attack_techniques", []),

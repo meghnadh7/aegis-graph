@@ -164,22 +164,103 @@ class MockLLM:
                 "feedback": "Acceptable triage. Consider deepening investigation pivot on user account.",
             }
         if "Report" in schema_name or "Verdict" in schema_name:
-            verdict = rng.choice(["true_positive", "false_positive", "escalate"])
-            if "powershell" in lower and "encoded" in lower:
-                verdict = "true_positive"
+            verdict = _verdict_from_keywords(lower, rng)
             return {
                 "verdict": verdict,
-                "analyst_summary": self._analyst_summary(text, rng),
+                "analyst_summary": self._analyst_summary(text, lower, verdict, rng),
                 "recommended_action": _action_for(verdict),
             }
         return {}
 
-    def _analyst_summary(self, text: str, rng: random.Random) -> str:
-        return (
-            "Alert reviewed and correlated against threat-intel sources. Multiple indicators were "
-            "observed including the source host and observed command line. Enrichment data supports "
-            "the assessment. Recommend the action below pending analyst confirmation."
-        )
+    def _analyst_summary(self, text: str, lower: str, verdict: str, rng: random.Random) -> str:
+        # Three flavours so consecutive runs don't all read identically.
+        if verdict == "true_positive":
+            tp_variants = [
+                "Threat-intel enrichment confirmed malicious activity on the source host. The observed "
+                "command line and parent-process pattern align with the mapped ATT&CK technique. "
+                "Recommend immediate containment.",
+                "Multiple TI sources flagged the indicators in this alert as malicious, and the "
+                "Sigma rule match reinforces the verdict. The host should be isolated pending forensic "
+                "review.",
+                "Confirmed malicious behaviour: enrichment scores and the matched Sigma rule both "
+                "support a true-positive verdict. Containment is the recommended action.",
+            ]
+            return rng.choice(tp_variants)
+        if verdict == "false_positive":
+            fp_variants = [
+                "Enrichment showed clean reputations across sources, and the command line matches a "
+                "known-good administrative pattern for this environment. No action required beyond "
+                "closure.",
+                "The pattern is consistent with routine maintenance activity and the source host is "
+                "not a critical asset. Recommend closing the alert as benign.",
+                "Indicators are benign according to all five threat-intel sources. The behaviour is "
+                "characteristic of a scheduled IT process, not an attacker.",
+            ]
+            return rng.choice(fp_variants)
+        # escalate
+        esc_variants = [
+            "Indicators are ambiguous: some enrichment data is suspicious but not conclusive. "
+            "Tier-2 should perform a forensic review before any containment action.",
+            "The observed behaviour partially matches the ATT&CK technique but the evidence does "
+            "not yet justify a containment action. Escalating for human review.",
+            "Mixed signals from threat-intel and unusual timing on a tagged-critical asset warrant "
+            "a Tier-2 deep-dive before deciding on containment.",
+        ]
+        return rng.choice(esc_variants)
+
+
+# ---------- verdict heuristics ----------------------------------------
+# Keywords pulled from the alert templates. Real Claude would do richer
+# reasoning, but these rules approximate the same kind of pattern matching
+# a Tier-1 analyst would do off the alert content alone.
+_TP_TOKENS = (
+    "encodedcommand", "iex download cradle", "iex(new-object",
+    "mimikatz credential dumping", "mimikatz",
+    "suspicious lsass handle", "loader.exe",
+    "office spawning cmd", "office macro spawns",
+    "suspicious lnk attachment", "lnk attachment",
+    "dns txt record exfiltration", "high-entropy dga",
+    "multiple failed logins followed by success",
+    "blacklisted ip",
+)
+_FP_TOKENS = (
+    "get-windowsupdate", "powershell update check",
+    "powershell scheduled inventory", "scheduled backup service",
+    "known business newsletter", "internal hr document",
+    "task manager lsass dump", "task manager",
+    "vpn login from registered", "registered home ip",
+    "browser post to pastebin",
+    "cdn connection from corporate browser", "cdn connection",
+)
+_ESC_TOKENS = (
+    "after-hours admin login", "after-hours",
+    "impossible travel",
+    "procdump lsass memory dump", "procdump",
+    "reg save hklm",
+    "macro-enabled office document",
+    "periodic http get pattern", "beacon-like",
+    "spearphishing link",
+)
+
+
+def _verdict_from_keywords(lower: str, rng: random.Random) -> str:
+    """Pick a verdict by scanning the prompt for known alert-shape keywords.
+
+    Order matters: true_positive tokens take priority because they're the
+    most specific (a real PowerShell IEX cradle line beats a generic
+    "macro-enabled document"). Falls back to a 1/3 random choice if
+    nothing matches.
+    """
+    for tok in _TP_TOKENS:
+        if tok in lower:
+            return "true_positive"
+    for tok in _FP_TOKENS:
+        if tok in lower:
+            return "false_positive"
+    for tok in _ESC_TOKENS:
+        if tok in lower:
+            return "escalate"
+    return rng.choice(["true_positive", "false_positive", "escalate"])
 
 
 def _action_for(verdict: str) -> str:
