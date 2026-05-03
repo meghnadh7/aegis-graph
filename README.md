@@ -42,7 +42,7 @@ To run with real APIs: drop your keys into `.env` and set `MOCK_MODE=false`. Eac
                                             │
                           ┌─────────────────┘
                           ▼
-                       triage  (IOC extract + 5 MCP fan-out)
+                       triage  (IOC extract + 5 MCP fan-out virus total, shodan , abuseibdp , URLhaus and grey noise )
                           │
                           ▼
                     attack_mapper  (HyDE → Pinecone)
