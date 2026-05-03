@@ -141,6 +141,4 @@ The isolation boundaries:
 - Wire `interrupt_after` into a tiny review UI so an analyst can approve / edit before the IRIS write happens.
 - LangSmith CI gate that fails a PR if verdict accuracy on the golden set regresses past a threshold.
 
-## License
 
-MIT.
