@@ -130,6 +130,3 @@ kubernetes/       manifests
 
 Notes on prompt injection via alert fields, RAG poisoning, tool-misuse via crafted alerts, and DoS in `THREAT_MODEL.md`. Each item is mapped to a MITRE ATLAS technique where one applies.
 
-## License
-
-MIT.
