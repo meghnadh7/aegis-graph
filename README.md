@@ -1,6 +1,6 @@
 # aegis-graph
 
-A small project I put together while interviewing for an Applied AI Engineer role at an MSSP. The idea was to mock up what a Tier-1 SOC triage copilot looks like end-to-end: alert in, IOC enrichment, MITRE ATT&CK mapping, an investigation timeline, a self-critic that can force a revision, and a finished case in DFIR-IRIS.
+A small project I put together . The idea was to mock up what a Tier-1 SOC triage copilot looks like end-to-end: alert in, IOC enrichment, MITRE ATT&CK mapping, an investigation timeline, a self-critic that can force a revision, and a finished case in DFIR-IRIS.
 
 It runs entirely offline by default (every external API has a deterministic mock), so you can clone and `make demo` without keys.
 
