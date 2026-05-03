@@ -1,12 +1,12 @@
 {
   "summary": {
     "verdict_accuracy": {
-      "mean": 1.0,
-      "median": 1.0,
+      "mean": 0.41,
+      "median": 0.0,
       "n": 200
     },
     "attack_mapping_accuracy": {
-      "mean": 0.5,
+      "mean": 0.5775,
       "median": 0.5,
       "n": 200
     },
@@ -16,21 +16,21 @@
       "n": 200
     },
     "ioc_f1": {
-      "mean": 0.7996,
-      "median": 0.8,
+      "mean": 0.8603,
+      "median": 1.0,
       "n": 200
     },
     "cost_per_alert_usd": {
-      "mean": 0.0136,
+      "mean": 0.0153,
       "median": 0.01,
       "n": 200
     },
-    "wall_time_seconds": 4.68,
+    "wall_time_seconds": 4.44,
     "alerts": 200
   },
   "rows": [
     {
-      "alert_id": "AL-A03936FA75",
+      "alert_id": "AL-19D821E645",
       "tenant_id": "tenant_a",
       "expected": "true_positive",
       "predicted": "true_positive",
@@ -38,12 +38,38 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.017
+      }
+    },
+    {
+      "alert_id": "AL-F639423D10",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-D6A0D50523",
+      "tenant_id": "tenant_a",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
         "ioc_f1": 0.8,
         "cost_per_alert_usd": 0.01
       }
     },
     {
-      "alert_id": "AL-13E09832A2",
+      "alert_id": "AL-53AD4EACCE",
       "tenant_id": "tenant_b",
       "expected": "true_positive",
       "predicted": "true_positive",
@@ -56,7 +82,33 @@
       }
     },
     {
-      "alert_id": "AL-39F88D705E",
+      "alert_id": "AL-6092EA39DE",
+      "tenant_id": "tenant_a",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-7D906BEBDA",
+      "tenant_id": "tenant_b",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-CB2B56F2E6",
       "tenant_id": "tenant_a",
       "expected": "true_positive",
       "predicted": "true_positive",
@@ -64,12 +116,38 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.024000000000000004
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
-      "alert_id": "AL-FCC4C989E4",
+      "alert_id": "AL-B9B67836F7",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-76F996443A",
+      "tenant_id": "tenant_a",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-9BD6732197",
       "tenant_id": "tenant_b",
       "expected": "true_positive",
       "predicted": "true_positive",
@@ -82,51 +160,12 @@
       }
     },
     {
-      "alert_id": "AL-6B02795C5B",
+      "alert_id": "AL-29C94FC3C6",
       "tenant_id": "tenant_a",
-      "expected": "true_positive",
+      "expected": "false_positive",
       "predicted": "true_positive",
       "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.5,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.017
-      }
-    },
-    {
-      "alert_id": "AL-742B5D2FB8",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.5,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.024000000000000004
-      }
-    },
-    {
-      "alert_id": "AL-634DDF93BD",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.5,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-E4BC85AFC4",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
+        "verdict_accuracy": 0.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
         "ioc_f1": 1.0,
@@ -134,125 +173,21 @@
       }
     },
     {
-      "alert_id": "AL-4E3E65FDCD",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.5,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.024000000000000004
-      }
-    },
-    {
-      "alert_id": "AL-1AF5B30FDB",
+      "alert_id": "AL-B01375B7F9",
       "tenant_id": "tenant_b",
-      "expected": "true_positive",
+      "expected": "escalate",
       "predicted": "true_positive",
       "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.5,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-E016143713",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.5,
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 0.8,
         "cost_per_alert_usd": 0.017
       }
     },
     {
-      "alert_id": "AL-1259C7199E",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.5,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-7B47180742",
+      "alert_id": "AL-44BBABA4F9",
       "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.5,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-2BC52BBC7C",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.5,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-65F99BA9DE",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.5,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.017
-      }
-    },
-    {
-      "alert_id": "AL-D2577CACDD",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.5,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-72184B30DF",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.5,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-09EE70C537",
-      "tenant_id": "tenant_b",
       "expected": "true_positive",
       "predicted": "true_positive",
       "evals": {
@@ -264,20 +199,33 @@
       }
     },
     {
-      "alert_id": "AL-93575AE198",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
+      "alert_id": "AL-A9A269828C",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
       "predicted": "true_positive",
       "evals": {
-        "verdict_accuracy": 1.0,
+        "verdict_accuracy": 0.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
+        "ioc_f1": 1.0,
         "cost_per_alert_usd": 0.017
       }
     },
     {
-      "alert_id": "AL-78631E4F56",
+      "alert_id": "AL-74CCE1C470",
+      "tenant_id": "tenant_a",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-6C1495306C",
       "tenant_id": "tenant_b",
       "expected": "true_positive",
       "predicted": "true_positive",
@@ -290,21 +238,34 @@
       }
     },
     {
-      "alert_id": "AL-25D1B5808B",
+      "alert_id": "AL-B5B9E1164F",
       "tenant_id": "tenant_a",
-      "expected": "true_positive",
+      "expected": "false_positive",
       "predicted": "true_positive",
       "evals": {
-        "verdict_accuracy": 1.0,
+        "verdict_accuracy": 0.0,
         "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-2EE0E7BD3D",
+      "tenant_id": "tenant_b",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 0.8,
         "cost_per_alert_usd": 0.01
       }
     },
     {
-      "alert_id": "AL-7F304D4AB3",
-      "tenant_id": "tenant_b",
+      "alert_id": "AL-3E87BC1741",
+      "tenant_id": "tenant_a",
       "expected": "true_positive",
       "predicted": "true_positive",
       "evals": {
@@ -316,168 +277,25 @@
       }
     },
     {
-      "alert_id": "AL-0BC18FE68F",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
+      "alert_id": "AL-C417630ADD",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
       "predicted": "true_positive",
       "evals": {
-        "verdict_accuracy": 1.0,
+        "verdict_accuracy": 0.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
+        "ioc_f1": 1.0,
         "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
-      "alert_id": "AL-E3B92948A6",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.5,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-81B5E0C3A0",
+      "alert_id": "AL-C685D47D19",
       "tenant_id": "tenant_a",
-      "expected": "true_positive",
+      "expected": "escalate",
       "predicted": "true_positive",
       "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.5,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-BD92A43BD0",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.5,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-DD50084643",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.5,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-FF7890ED15",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.5,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-55319230A3",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.5,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-2462C38E99",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.5,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-A477F15E4D",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.5,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.024000000000000004
-      }
-    },
-    {
-      "alert_id": "AL-549759D2B1",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.5,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-E78FC0779D",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.5,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.024000000000000004
-      }
-    },
-    {
-      "alert_id": "AL-EFE5CF9C6D",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.5,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-45506FBB81",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
+        "verdict_accuracy": 0.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
         "ioc_f1": 0.8,
@@ -485,8 +303,47 @@
       }
     },
     {
-      "alert_id": "AL-8C1024A419",
+      "alert_id": "AL-4A6AA12057",
       "tenant_id": "tenant_b",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-316BAD463C",
+      "tenant_id": "tenant_a",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-F01873E89D",
+      "tenant_id": "tenant_b",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-A00359A4FE",
+      "tenant_id": "tenant_a",
       "expected": "true_positive",
       "predicted": "true_positive",
       "evals": {
@@ -498,12 +355,25 @@
       }
     },
     {
-      "alert_id": "AL-326DA522E1",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
+      "alert_id": "AL-1772569076",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
       "predicted": "true_positive",
       "evals": {
-        "verdict_accuracy": 1.0,
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.017
+      }
+    },
+    {
+      "alert_id": "AL-7F6F6EE595",
+      "tenant_id": "tenant_a",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
         "ioc_f1": 0.8,
@@ -511,7 +381,7 @@
       }
     },
     {
-      "alert_id": "AL-92E981AFEA",
+      "alert_id": "AL-2CF7939445",
       "tenant_id": "tenant_b",
       "expected": "true_positive",
       "predicted": "true_positive",
@@ -520,25 +390,90 @@
         "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
         "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.024000000000000004
-      }
-    },
-    {
-      "alert_id": "AL-4B603EF148",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.5,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
         "cost_per_alert_usd": 0.01
       }
     },
     {
-      "alert_id": "AL-EA3E4F3384",
+      "alert_id": "AL-FED0E8DE82",
+      "tenant_id": "tenant_a",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-AC91B7D750",
       "tenant_id": "tenant_b",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-A4E185FA9B",
+      "tenant_id": "tenant_a",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-2540E52730",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.017
+      }
+    },
+    {
+      "alert_id": "AL-823107F8A0",
+      "tenant_id": "tenant_a",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-650CA08224",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-94B5AF2DCA",
+      "tenant_id": "tenant_a",
       "expected": "true_positive",
       "predicted": "true_positive",
       "evals": {
@@ -550,21 +485,73 @@
       }
     },
     {
-      "alert_id": "AL-8DB99728D8",
+      "alert_id": "AL-7CAA2FB2BC",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-111F6E53E2",
       "tenant_id": "tenant_a",
       "expected": "true_positive",
       "predicted": "true_positive",
       "evals": {
         "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
+        "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.4444444444444445,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.017
+      }
+    },
+    {
+      "alert_id": "AL-E95736FB1C",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-687918F12B",
+      "tenant_id": "tenant_a",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
         "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
-      "alert_id": "AL-DD54B9EACF",
+      "alert_id": "AL-AC7E0F350E",
       "tenant_id": "tenant_b",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-C1019EB3AC",
+      "tenant_id": "tenant_a",
       "expected": "true_positive",
       "predicted": "true_positive",
       "evals": {
@@ -576,12 +563,25 @@
       }
     },
     {
-      "alert_id": "AL-5487DE5949",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
+      "alert_id": "AL-7D65D11BE1",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
       "predicted": "true_positive",
       "evals": {
-        "verdict_accuracy": 1.0,
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-3B789E97B1",
+      "tenant_id": "tenant_a",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 0.8,
@@ -589,7 +589,85 @@
       }
     },
     {
-      "alert_id": "AL-F140AB0A91",
+      "alert_id": "AL-BBD9DBCC4E",
+      "tenant_id": "tenant_b",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.017
+      }
+    },
+    {
+      "alert_id": "AL-95EF285CF8",
+      "tenant_id": "tenant_a",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-D213245856",
+      "tenant_id": "tenant_b",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-821CB5E418",
+      "tenant_id": "tenant_a",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-81E1F883D2",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-7323C93E15",
+      "tenant_id": "tenant_a",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-40276399E9",
       "tenant_id": "tenant_b",
       "expected": "true_positive",
       "predicted": "true_positive",
@@ -602,21 +680,34 @@
       }
     },
     {
-      "alert_id": "AL-56D8EE36BB",
+      "alert_id": "AL-B37CAD3B3E",
       "tenant_id": "tenant_a",
-      "expected": "true_positive",
+      "expected": "false_positive",
       "predicted": "true_positive",
       "evals": {
-        "verdict_accuracy": 1.0,
+        "verdict_accuracy": 0.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.4444444444444445,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.017
+      }
+    },
+    {
+      "alert_id": "AL-FF0C5FE36A",
+      "tenant_id": "tenant_b",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8,
         "cost_per_alert_usd": 0.01
       }
     },
     {
-      "alert_id": "AL-CB6F9598AD",
-      "tenant_id": "tenant_b",
+      "alert_id": "AL-9CA53D0559",
+      "tenant_id": "tenant_a",
       "expected": "true_positive",
       "predicted": "true_positive",
       "evals": {
@@ -628,12 +719,25 @@
       }
     },
     {
-      "alert_id": "AL-85D1D22425",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
+      "alert_id": "AL-9D99B23DE3",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
       "predicted": "true_positive",
       "evals": {
-        "verdict_accuracy": 1.0,
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-671891D092",
+      "tenant_id": "tenant_a",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 0.8,
@@ -641,7 +745,7 @@
       }
     },
     {
-      "alert_id": "AL-3E129093ED",
+      "alert_id": "AL-EB9B7AC728",
       "tenant_id": "tenant_b",
       "expected": "true_positive",
       "predicted": "true_positive",
@@ -649,12 +753,38 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-7FCE5CA2B9",
+      "tenant_id": "tenant_a",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.017
+      }
+    },
+    {
+      "alert_id": "AL-4223338B54",
+      "tenant_id": "tenant_b",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8,
         "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
-      "alert_id": "AL-E31947AC91",
+      "alert_id": "AL-91E6DFC0A2",
       "tenant_id": "tenant_a",
       "expected": "true_positive",
       "predicted": "true_positive",
@@ -662,194 +792,38 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.4444444444444445,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-61702451E6",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-F28057FF8E",
+      "tenant_id": "tenant_a",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8,
         "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
-      "alert_id": "AL-95ECBF2955",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-D4E8338F7D",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.4444444444444445,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-6F7D5B9BE1",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.017
-      }
-    },
-    {
-      "alert_id": "AL-D66A16B0DA",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.4444444444444445,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-0C66929EFF",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.017
-      }
-    },
-    {
-      "alert_id": "AL-B4B75726A7",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-F0E125605D",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.024000000000000004
-      }
-    },
-    {
-      "alert_id": "AL-DB3933A7C6",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.017
-      }
-    },
-    {
-      "alert_id": "AL-AA1316E13A",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-E70C9F10A7",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-3E904B5583",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-C393B0D62D",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.4444444444444445,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-D010995F45",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-F94C5B8579",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-DB3ED7CAC3",
+      "alert_id": "AL-6C8D754AA4",
       "tenant_id": "tenant_b",
       "expected": "true_positive",
       "predicted": "true_positive",
@@ -862,194 +836,25 @@
       }
     },
     {
-      "alert_id": "AL-7F8BC5A8D8",
+      "alert_id": "AL-051ED772B2",
       "tenant_id": "tenant_a",
-      "expected": "true_positive",
+      "expected": "false_positive",
       "predicted": "true_positive",
       "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.4444444444444445,
-        "cost_per_alert_usd": 0.024000000000000004
-      }
-    },
-    {
-      "alert_id": "AL-B5E4BBEA86",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-78540D9524",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-0C5F6461FB",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
+        "verdict_accuracy": 0.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-4EEFC1D332",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.4444444444444445,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-3E14F460ED",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.024000000000000004
-      }
-    },
-    {
-      "alert_id": "AL-26F5C1D501",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
         "cost_per_alert_usd": 0.017
       }
     },
     {
-      "alert_id": "AL-0EBAFFEDCD",
+      "alert_id": "AL-A52F7BF777",
       "tenant_id": "tenant_b",
-      "expected": "true_positive",
+      "expected": "escalate",
       "predicted": "true_positive",
       "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-8E2D32E9EE",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.024000000000000004
-      }
-    },
-    {
-      "alert_id": "AL-FE79FF97A6",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-6742AA65F6",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.024000000000000004
-      }
-    },
-    {
-      "alert_id": "AL-5B078F419B",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-A8CD929B71",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.4444444444444445,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-B05B185F30",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-AB3712C63D",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
+        "verdict_accuracy": 0.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 0.8,
@@ -1057,7 +862,46 @@
       }
     },
     {
-      "alert_id": "AL-66715F1AA0",
+      "alert_id": "AL-D6A67DFFF2",
+      "tenant_id": "tenant_a",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.5,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-E9FE5FCF34",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.017
+      }
+    },
+    {
+      "alert_id": "AL-66FB314CA2",
+      "tenant_id": "tenant_a",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-0F7E9EED75",
       "tenant_id": "tenant_b",
       "expected": "true_positive",
       "predicted": "true_positive",
@@ -1070,7 +914,163 @@
       }
     },
     {
-      "alert_id": "AL-709DE96F68",
+      "alert_id": "AL-741EC6B57E",
+      "tenant_id": "tenant_a",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-36323FB92C",
+      "tenant_id": "tenant_b",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-A55301068F",
+      "tenant_id": "tenant_a",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-D0748C80F4",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-36FC1DAC40",
+      "tenant_id": "tenant_a",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-08F0EA5E3E",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.017
+      }
+    },
+    {
+      "alert_id": "AL-D3346D20EC",
+      "tenant_id": "tenant_a",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-6735422212",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.017
+      }
+    },
+    {
+      "alert_id": "AL-E25F661CFD",
+      "tenant_id": "tenant_a",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.5,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-83548EBBB3",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.017
+      }
+    },
+    {
+      "alert_id": "AL-A8924BB9B0",
+      "tenant_id": "tenant_a",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-0495E806E3",
+      "tenant_id": "tenant_b",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-ECC47A1352",
       "tenant_id": "tenant_a",
       "expected": "true_positive",
       "predicted": "true_positive",
@@ -1078,12 +1078,506 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
+        "ioc_f1": 0.7499999999999999,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-B469B43FA2",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8571428571428571,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-F66D3DBCA1",
+      "tenant_id": "tenant_a",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8571428571428571,
         "cost_per_alert_usd": 0.01
       }
     },
     {
-      "alert_id": "AL-30849AFD65",
+      "alert_id": "AL-F2E391DEB6",
+      "tenant_id": "tenant_b",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.7499999999999999,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-EB2DFDE67A",
+      "tenant_id": "tenant_a",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8571428571428571,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-346B282BD2",
+      "tenant_id": "tenant_b",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8571428571428571,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-75EDBEE69F",
+      "tenant_id": "tenant_a",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.017
+      }
+    },
+    {
+      "alert_id": "AL-56A329522E",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.7499999999999999,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-9D13C0E33F",
+      "tenant_id": "tenant_a",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8571428571428571,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-4467DF6BF4",
+      "tenant_id": "tenant_b",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.017
+      }
+    },
+    {
+      "alert_id": "AL-2709510C4A",
+      "tenant_id": "tenant_a",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.7499999999999999,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-BB1487C1A8",
+      "tenant_id": "tenant_b",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8571428571428571,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-6430716A46",
+      "tenant_id": "tenant_a",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.7499999999999999,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-A92046C02C",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8571428571428571,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-D18680CD17",
+      "tenant_id": "tenant_a",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8571428571428571,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-AC7996638F",
+      "tenant_id": "tenant_b",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-A12F54506D",
+      "tenant_id": "tenant_a",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8571428571428571,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-A45AF1FD33",
+      "tenant_id": "tenant_b",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8571428571428571,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-B670123F1C",
+      "tenant_id": "tenant_a",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.7499999999999999,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-C9854674CA",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8571428571428571,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-EC95078073",
+      "tenant_id": "tenant_a",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8571428571428571,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-151283EE31",
+      "tenant_id": "tenant_b",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-DE79C64D48",
+      "tenant_id": "tenant_a",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.7499999999999999,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-2E5D7B8855",
+      "tenant_id": "tenant_b",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8571428571428571,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-2472A41F95",
+      "tenant_id": "tenant_a",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-3EFFA7F22E",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8571428571428571,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-65C5C37FDD",
+      "tenant_id": "tenant_a",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8571428571428571,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-7E38D1576F",
+      "tenant_id": "tenant_b",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-EB49EDDE5D",
+      "tenant_id": "tenant_a",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.7499999999999999,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-458D86661B",
+      "tenant_id": "tenant_b",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8571428571428571,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-597A03211E",
+      "tenant_id": "tenant_a",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.7499999999999999,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-AEDC6F029B",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.7499999999999999,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-45C2C2F470",
+      "tenant_id": "tenant_a",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.7499999999999999,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-B76BC34B8A",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.7499999999999999,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-F1C19A0E42",
+      "tenant_id": "tenant_a",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.017
+      }
+    },
+    {
+      "alert_id": "AL-4E1704022A",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8571428571428571,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-BE612259D3",
+      "tenant_id": "tenant_a",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.7499999999999999,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-539A2C2405",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.7499999999999999,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-CEE612011C",
+      "tenant_id": "tenant_a",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.017
+      }
+    },
+    {
+      "alert_id": "AL-A42FDF03A4",
       "tenant_id": "tenant_b",
       "expected": "true_positive",
       "predicted": "true_positive",
@@ -1096,7 +1590,7 @@
       }
     },
     {
-      "alert_id": "AL-A60292FCC0",
+      "alert_id": "AL-8E6F326A10",
       "tenant_id": "tenant_a",
       "expected": "true_positive",
       "predicted": "true_positive",
@@ -1104,43 +1598,17 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8571428571428571,
+        "ioc_f1": 1.0,
         "cost_per_alert_usd": 0.01
       }
     },
     {
-      "alert_id": "AL-B6B7F721E1",
+      "alert_id": "AL-E1E0F39FD8",
       "tenant_id": "tenant_b",
-      "expected": "true_positive",
+      "expected": "false_positive",
       "predicted": "true_positive",
       "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.7499999999999999,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-B71022AEAE",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-3CC4C9B56C",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
+        "verdict_accuracy": 0.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 1.0,
@@ -1148,21 +1616,60 @@
       }
     },
     {
-      "alert_id": "AL-2D1742BBAE",
+      "alert_id": "AL-B8C5FDFA7F",
       "tenant_id": "tenant_a",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-7089E14DA6",
+      "tenant_id": "tenant_b",
       "expected": "true_positive",
       "predicted": "true_positive",
       "evals": {
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8571428571428571,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-1F58946BE2",
+      "tenant_id": "tenant_a",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-E7B97D2D1B",
+      "tenant_id": "tenant_b",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
         "cost_per_alert_usd": 0.017
       }
     },
     {
-      "alert_id": "AL-11592ABE16",
-      "tenant_id": "tenant_b",
+      "alert_id": "AL-3E37D3A008",
+      "tenant_id": "tenant_a",
       "expected": "true_positive",
       "predicted": "true_positive",
       "evals": {
@@ -1174,25 +1681,12 @@
       }
     },
     {
-      "alert_id": "AL-067D22F7C9",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-918372BF38",
+      "alert_id": "AL-47E0C3D4A4",
       "tenant_id": "tenant_b",
-      "expected": "true_positive",
+      "expected": "false_positive",
       "predicted": "true_positive",
       "evals": {
-        "verdict_accuracy": 1.0,
+        "verdict_accuracy": 0.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 1.0,
@@ -1200,285 +1694,51 @@
       }
     },
     {
-      "alert_id": "AL-409B8771B0",
+      "alert_id": "AL-B74EA01198",
       "tenant_id": "tenant_a",
-      "expected": "true_positive",
+      "expected": "escalate",
       "predicted": "true_positive",
       "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8571428571428571,
-        "cost_per_alert_usd": 0.024000000000000004
-      }
-    },
-    {
-      "alert_id": "AL-FAC54550D3",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
+        "verdict_accuracy": 0.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-EC0DE0BB67",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-592812A992",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.7499999999999999,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-1B7F129C78",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8571428571428571,
         "cost_per_alert_usd": 0.017
       }
     },
     {
-      "alert_id": "AL-3E992032BF",
+      "alert_id": "AL-662013F518",
       "tenant_id": "tenant_b",
       "expected": "true_positive",
       "predicted": "true_positive",
       "evals": {
         "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
+        "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 1.0,
         "cost_per_alert_usd": 0.01
       }
     },
     {
-      "alert_id": "AL-6E9322C008",
+      "alert_id": "AL-69D778E5F1",
       "tenant_id": "tenant_a",
-      "expected": "true_positive",
+      "expected": "false_positive",
       "predicted": "true_positive",
       "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.024000000000000004
-      }
-    },
-    {
-      "alert_id": "AL-C6180EBFF2",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
+        "verdict_accuracy": 0.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
+        "cost_per_alert_usd": 0.017
       }
     },
     {
-      "alert_id": "AL-CA6E2ABB44",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.024000000000000004
-      }
-    },
-    {
-      "alert_id": "AL-A01EAD34C1",
+      "alert_id": "AL-1DC056FD61",
       "tenant_id": "tenant_b",
-      "expected": "true_positive",
+      "expected": "escalate",
       "predicted": "true_positive",
       "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.7499999999999999,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-11909AEFF0",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8571428571428571,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-1582B16ACC",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-FCE49F25A0",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8571428571428571,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-E288E65A8F",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.7499999999999999,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-F556C76A6E",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8571428571428571,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-1A2A528510",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.7499999999999999,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-990CBEFA20",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-24CDEC28F1",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-DE6ED58E21",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8571428571428571,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-0D50F133C5",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.7499999999999999,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-BF55E2986F",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.024000000000000004
-      }
-    },
-    {
-      "alert_id": "AL-CD2EB10936",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
+        "verdict_accuracy": 0.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 1.0,
@@ -1486,7 +1746,7 @@
       }
     },
     {
-      "alert_id": "AL-DABC3FE8E1",
+      "alert_id": "AL-126E86A2BC",
       "tenant_id": "tenant_a",
       "expected": "true_positive",
       "predicted": "true_positive",
@@ -1494,13 +1754,78 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-3771430FCD",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.017
+      }
+    },
+    {
+      "alert_id": "AL-91827E0D5F",
+      "tenant_id": "tenant_a",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-80E9562C6D",
+      "tenant_id": "tenant_b",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-8676B45408",
+      "tenant_id": "tenant_a",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-93A31AF228",
+      "tenant_id": "tenant_b",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
         "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
-      "alert_id": "AL-9BA6E29810",
-      "tenant_id": "tenant_b",
+      "alert_id": "AL-5E91D29AA2",
+      "tenant_id": "tenant_a",
       "expected": "true_positive",
       "predicted": "true_positive",
       "evals": {
@@ -1512,51 +1837,51 @@
       }
     },
     {
-      "alert_id": "AL-F1C177889F",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
+      "alert_id": "AL-4DE9C2A37C",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
       "predicted": "true_positive",
       "evals": {
-        "verdict_accuracy": 1.0,
+        "verdict_accuracy": 0.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8571428571428571,
-        "cost_per_alert_usd": 0.017
-      }
-    },
-    {
-      "alert_id": "AL-E0C7AB9236",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.7499999999999999,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-C3716C5B93",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
+        "ioc_f1": 1.0,
         "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
-      "alert_id": "AL-269871AC3C",
+      "alert_id": "AL-8FDEE351DB",
+      "tenant_id": "tenant_a",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-9470770CE9",
       "tenant_id": "tenant_b",
       "expected": "true_positive",
       "predicted": "true_positive",
       "evals": {
         "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-B4925F94F2",
+      "tenant_id": "tenant_a",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 1.0,
@@ -1564,51 +1889,12 @@
       }
     },
     {
-      "alert_id": "AL-4610A86362",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8571428571428571,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-1A7E8DD3D5",
+      "alert_id": "AL-532DDF17C2",
       "tenant_id": "tenant_b",
-      "expected": "true_positive",
+      "expected": "escalate",
       "predicted": "true_positive",
       "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.7499999999999999,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-802A3F6CA2",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.017
-      }
-    },
-    {
-      "alert_id": "AL-08780B9444",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
+        "verdict_accuracy": 0.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 1.0,
@@ -1616,99 +1902,8 @@
       }
     },
     {
-      "alert_id": "AL-0D2A6E7CBC",
+      "alert_id": "AL-13E12D7629",
       "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-E12C2F79BD",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-E14D96BE05",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-EBAE36EE9A",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.017
-      }
-    },
-    {
-      "alert_id": "AL-B51F679AA0",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.017
-      }
-    },
-    {
-      "alert_id": "AL-F09F77A4B7",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.017
-      }
-    },
-    {
-      "alert_id": "AL-E4D2739822",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-14AA2D7C2D",
-      "tenant_id": "tenant_b",
       "expected": "true_positive",
       "predicted": "true_positive",
       "evals": {
@@ -1720,98 +1915,33 @@
       }
     },
     {
-      "alert_id": "AL-3F48111616",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-F11C64CDB1",
+      "alert_id": "AL-1FB172F297",
       "tenant_id": "tenant_b",
-      "expected": "true_positive",
+      "expected": "false_positive",
       "predicted": "true_positive",
       "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-12132E9B51",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-F5B7DAE53A",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-B96F640B3F",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-13BA4D5030",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.017
-      }
-    },
-    {
-      "alert_id": "AL-3E21582D8B",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
         "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
-      "alert_id": "AL-D21B3294B8",
+      "alert_id": "AL-E109EF2E0C",
+      "tenant_id": "tenant_a",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-1243E367E8",
       "tenant_id": "tenant_b",
       "expected": "true_positive",
       "predicted": "true_positive",
@@ -1824,59 +1954,59 @@
       }
     },
     {
-      "alert_id": "AL-FD5E840DD5",
+      "alert_id": "AL-7058EA759F",
+      "tenant_id": "tenant_a",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-039F7C3932",
+      "tenant_id": "tenant_b",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-F75552C8DE",
       "tenant_id": "tenant_a",
       "expected": "true_positive",
       "predicted": "true_positive",
       "evals": {
         "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
+        "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
+        "ioc_f1": 1.0,
         "cost_per_alert_usd": 0.017
       }
     },
     {
-      "alert_id": "AL-4345349CBF",
+      "alert_id": "AL-EAAE608598",
       "tenant_id": "tenant_b",
-      "expected": "true_positive",
+      "expected": "false_positive",
       "predicted": "true_positive",
       "evals": {
-        "verdict_accuracy": 1.0,
+        "verdict_accuracy": 0.0,
         "attack_mapping_accuracy": 1.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
+        "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
-      "alert_id": "AL-F61305FD96",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-70D3E3A22D",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-660F94A3AF",
+      "alert_id": "AL-CD440701F2",
       "tenant_id": "tenant_a",
       "expected": "true_positive",
       "predicted": "true_positive",
@@ -1884,13 +2014,26 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
+        "ioc_f1": 1.0,
         "cost_per_alert_usd": 0.01
       }
     },
     {
-      "alert_id": "AL-A64254770A",
+      "alert_id": "AL-1B0364A0DA",
       "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-EEFC43F0AE",
+      "tenant_id": "tenant_a",
       "expected": "true_positive",
       "predicted": "true_positive",
       "evals": {
@@ -1902,7 +2045,20 @@
       }
     },
     {
-      "alert_id": "AL-33A393FF8C",
+      "alert_id": "AL-E59DD48D6A",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-6718F6474B",
       "tenant_id": "tenant_a",
       "expected": "true_positive",
       "predicted": "true_positive",
@@ -1910,12 +2066,38 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
+        "ioc_f1": 1.0,
         "cost_per_alert_usd": 0.01
       }
     },
     {
-      "alert_id": "AL-395E48C1F4",
+      "alert_id": "AL-F8AD2634BD",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-FFC81B88DB",
+      "tenant_id": "tenant_a",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 1.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 1.0,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-265A8BB803",
       "tenant_id": "tenant_b",
       "expected": "true_positive",
       "predicted": "true_positive",
@@ -1928,33 +2110,7 @@
       }
     },
     {
-      "alert_id": "AL-AD5AE20896",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-39EC39362F",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.017
-      }
-    },
-    {
-      "alert_id": "AL-E85B091131",
+      "alert_id": "AL-2846A4F800",
       "tenant_id": "tenant_a",
       "expected": "true_positive",
       "predicted": "true_positive",
@@ -1967,311 +2123,12 @@
       }
     },
     {
-      "alert_id": "AL-9C4909CF34",
+      "alert_id": "AL-ADC1128252",
       "tenant_id": "tenant_b",
-      "expected": "true_positive",
+      "expected": "false_positive",
       "predicted": "true_positive",
       "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-A58C106921",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-A04C7C4872",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.017
-      }
-    },
-    {
-      "alert_id": "AL-81FC2B2F88",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.017
-      }
-    },
-    {
-      "alert_id": "AL-2646F3525B",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-E9F09D30BF",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-A5BC86D22B",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-33B07228AF",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-E37A9CEE4F",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-52E72D869C",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 1.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-C2406C913D",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 1.0,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-762B3327BA",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-3FEA9306A3",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-0B7E017E79",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.017
-      }
-    },
-    {
-      "alert_id": "AL-75DF2A801A",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-8C22FE2C0E",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-C502952FAC",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-B43F4DB4A4",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-ABF8F23C98",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.017
-      }
-    },
-    {
-      "alert_id": "AL-13ECECF9D7",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-40415B9C1D",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-20E255284E",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-C8E212F842",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.017
-      }
-    },
-    {
-      "alert_id": "AL-A50C8BF315",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
+        "verdict_accuracy": 0.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 0.5714285714285715,
@@ -2279,33 +2136,20 @@
       }
     },
     {
-      "alert_id": "AL-A35FDA3DC0",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.017
-      }
-    },
-    {
-      "alert_id": "AL-8CBB5D0771",
+      "alert_id": "AL-3AD308FDF2",
       "tenant_id": "tenant_a",
-      "expected": "true_positive",
+      "expected": "escalate",
       "predicted": "true_positive",
       "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.017
+        "ioc_f1": 0.5,
+        "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
-      "alert_id": "AL-10B301BB69",
+      "alert_id": "AL-59DAF029C4",
       "tenant_id": "tenant_b",
       "expected": "true_positive",
       "predicted": "true_positive",
@@ -2314,25 +2158,38 @@
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 0.6666666666666666,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-BB4557CD43",
+      "tenant_id": "tenant_a",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.5714285714285715,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-D9EF744288",
+      "tenant_id": "tenant_b",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.5,
         "cost_per_alert_usd": 0.01
       }
     },
     {
-      "alert_id": "AL-C9759FF8F7",
+      "alert_id": "AL-299504C261",
       "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.017
-      }
-    },
-    {
-      "alert_id": "AL-55AAEE1AD9",
-      "tenant_id": "tenant_b",
       "expected": "true_positive",
       "predicted": "true_positive",
       "evals": {
@@ -2344,20 +2201,33 @@
       }
     },
     {
-      "alert_id": "AL-334B967358",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
+      "alert_id": "AL-43E0E6D9B4",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
       "predicted": "true_positive",
       "evals": {
-        "verdict_accuracy": 1.0,
+        "verdict_accuracy": 0.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.01
+        "ioc_f1": 0.5714285714285715,
+        "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
-      "alert_id": "AL-8A46EF130D",
+      "alert_id": "AL-F55FA462A2",
+      "tenant_id": "tenant_a",
+      "expected": "escalate",
+      "predicted": "false_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.5,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-859B0870C5",
       "tenant_id": "tenant_b",
       "expected": "true_positive",
       "predicted": "true_positive",
@@ -2365,43 +2235,134 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-4E1E32BD48",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
         "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-F7CD61F425",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
         "cost_per_alert_usd": 0.017
       }
     },
     {
-      "alert_id": "AL-99844DED68",
+      "alert_id": "AL-29F8B402B4",
+      "tenant_id": "tenant_a",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.5714285714285715,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-CCB3860DF6",
+      "tenant_id": "tenant_b",
+      "expected": "escalate",
+      "predicted": "escalate",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.5,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-BBEF979BCC",
       "tenant_id": "tenant_a",
       "expected": "true_positive",
       "predicted": "true_positive",
       "evals": {
         "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.6666666666666666,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-1EF653702E",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.5714285714285715,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-BAF3CC2A81",
+      "tenant_id": "tenant_a",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.5,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-EEBF76DCEA",
+      "tenant_id": "tenant_b",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.6666666666666666,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-16B74E60DA",
+      "tenant_id": "tenant_a",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.5714285714285715,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-DB33D69D9B",
+      "tenant_id": "tenant_b",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.5,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-12F637E115",
+      "tenant_id": "tenant_a",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-B1AA54A686",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 0.5714285714285715,
@@ -2409,7 +2370,20 @@
       }
     },
     {
-      "alert_id": "AL-9149CCCA8E",
+      "alert_id": "AL-AA549E79CA",
+      "tenant_id": "tenant_a",
+      "expected": "escalate",
+      "predicted": "escalate",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.5,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-D2FDEA39FE",
       "tenant_id": "tenant_b",
       "expected": "true_positive",
       "predicted": "true_positive",
@@ -2422,7 +2396,33 @@
       }
     },
     {
-      "alert_id": "AL-51C51BA174",
+      "alert_id": "AL-F360E435EB",
+      "tenant_id": "tenant_a",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.5714285714285715,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-034E9E8B44",
+      "tenant_id": "tenant_b",
+      "expected": "escalate",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.5,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-1B0130541F",
       "tenant_id": "tenant_a",
       "expected": "true_positive",
       "predicted": "true_positive",
@@ -2430,13 +2430,78 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
+        "ioc_f1": 0.6666666666666666,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-83B422EA94",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
         "ioc_f1": 0.5714285714285715,
         "cost_per_alert_usd": 0.01
       }
     },
     {
-      "alert_id": "AL-5B18B729B0",
+      "alert_id": "AL-20BFAF309D",
+      "tenant_id": "tenant_a",
+      "expected": "escalate",
+      "predicted": "false_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.5,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-91AE093CF8",
       "tenant_id": "tenant_b",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.6666666666666666,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-0A1232D137",
+      "tenant_id": "tenant_a",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.5714285714285715,
+        "cost_per_alert_usd": 0.024000000000000004
+      }
+    },
+    {
+      "alert_id": "AL-3CCF5E0A51",
+      "tenant_id": "tenant_b",
+      "expected": "escalate",
+      "predicted": "false_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.5,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-07A15C723E",
+      "tenant_id": "tenant_a",
       "expected": "true_positive",
       "predicted": "true_positive",
       "evals": {
@@ -2448,12 +2513,12 @@
       }
     },
     {
-      "alert_id": "AL-B854FA4859",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
+      "alert_id": "AL-7528EFB498",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
       "predicted": "true_positive",
       "evals": {
-        "verdict_accuracy": 1.0,
+        "verdict_accuracy": 0.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
         "ioc_f1": 0.5714285714285715,
@@ -2461,20 +2526,7 @@
       }
     },
     {
-      "alert_id": "AL-7B90433E25",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-068D952BD4",
+      "alert_id": "AL-99811EE757",
       "tenant_id": "tenant_a",
       "expected": "true_positive",
       "predicted": "true_positive",
@@ -2487,20 +2539,20 @@
       }
     },
     {
-      "alert_id": "AL-65ED51843C",
+      "alert_id": "AL-6AC337827D",
       "tenant_id": "tenant_b",
-      "expected": "true_positive",
+      "expected": "false_positive",
       "predicted": "true_positive",
       "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.5,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.017
+        "ioc_f1": 0.5714285714285715,
+        "cost_per_alert_usd": 0.024000000000000004
       }
     },
     {
-      "alert_id": "AL-0F229C17E3",
+      "alert_id": "AL-4CE1E4ED23",
       "tenant_id": "tenant_a",
       "expected": "true_positive",
       "predicted": "true_positive",
@@ -2508,13 +2560,52 @@
         "verdict_accuracy": 1.0,
         "attack_mapping_accuracy": 0.0,
         "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.017
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.01
       }
     },
     {
-      "alert_id": "AL-80823173D6",
+      "alert_id": "AL-8720A989A9",
       "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.5,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.5714285714285715,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-A26A39F34C",
+      "tenant_id": "tenant_a",
+      "expected": "true_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 1.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.8,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-71B2CF0D5A",
+      "tenant_id": "tenant_b",
+      "expected": "false_positive",
+      "predicted": "true_positive",
+      "evals": {
+        "verdict_accuracy": 0.0,
+        "attack_mapping_accuracy": 0.0,
+        "hallucination_resistance": 1.0,
+        "ioc_f1": 0.5714285714285715,
+        "cost_per_alert_usd": 0.01
+      }
+    },
+    {
+      "alert_id": "AL-2C6B2B1874",
+      "tenant_id": "tenant_a",
       "expected": "true_positive",
       "predicted": "true_positive",
       "evals": {
@@ -2526,20 +2617,7 @@
       }
     },
     {
-      "alert_id": "AL-C451A80B63",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.5714285714285715,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-91968599E4",
+      "alert_id": "AL-68D31435C5",
       "tenant_id": "tenant_b",
       "expected": "true_positive",
       "predicted": "true_positive",
@@ -2549,84 +2627,6 @@
         "hallucination_resistance": 1.0,
         "ioc_f1": 0.6666666666666666,
         "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-320CB7F465",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-44467F1BAF",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-769FB1B7F1",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.017
-      }
-    },
-    {
-      "alert_id": "AL-A97FD5218E",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.8,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-D22574C6FF",
-      "tenant_id": "tenant_a",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.01
-      }
-    },
-    {
-      "alert_id": "AL-A4DF0B1F54",
-      "tenant_id": "tenant_b",
-      "expected": "true_positive",
-      "predicted": "true_positive",
-      "evals": {
-        "verdict_accuracy": 1.0,
-        "attack_mapping_accuracy": 0.0,
-        "hallucination_resistance": 1.0,
-        "ioc_f1": 0.6666666666666666,
-        "cost_per_alert_usd": 0.024000000000000004
       }
     }
   ]

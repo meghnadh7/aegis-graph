@@ -126,16 +126,42 @@ def generate_alert(
     return alert
 
 
+def _label_schedule(per_technique: int) -> List[str]:
+    """Build a per-technique label list that hits the 40/35/25 TP/FP/escalate split.
+
+    The previous version did `LABEL_DISTRIBUTION[i % 100]` which collapsed to
+    all-TP when per_technique was 40 (because the first 40 slots of the
+    distribution are all TP). This builds the right counts up front and
+    interleaves them so consecutive alerts of the same technique aren't
+    always the same label.
+    """
+    n_tp = round(per_technique * 0.40)
+    n_fp = round(per_technique * 0.35)
+    n_esc = per_technique - n_tp - n_fp  # remainder ≈ 25%
+    # Interleave so the order is TP,FP,ESC,TP,FP,ESC,... up to the smallest
+    # bucket, then drain whatever's left.
+    out: List[str] = []
+    pools = {"true_positive": n_tp, "false_positive": n_fp, "escalate": n_esc}
+    order = ["true_positive", "false_positive", "escalate"]
+    while sum(pools.values()) > 0:
+        for label in order:
+            if pools[label] > 0:
+                out.append(label)
+                pools[label] -= 1
+    return out[:per_technique]
+
+
 def generate_dataset(per_technique: int = 40, tenants: Optional[List[str]] = None) -> List[Dict[str, Any]]:
     """Generate a balanced dataset across all 5 templates and 2 tenants."""
     tenants = tenants or ["tenant_a", "tenant_b"]
     alerts: List[Dict[str, Any]] = []
     techniques = list_template_names()
+    schedule = _label_schedule(per_technique)
     seed_counter = 0
     for tech in techniques:
         for i in range(per_technique):
             tenant = tenants[i % len(tenants)]
-            label = LABEL_DISTRIBUTION[i % len(LABEL_DISTRIBUTION)]
+            label = schedule[i]
             alerts.append(generate_alert(tech, tenant, label=label, seed=seed_counter))
             seed_counter += 1
     return alerts

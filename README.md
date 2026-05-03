@@ -24,9 +24,10 @@ cd aegis-graph
 python3.11 -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 cp .env.example .env          # MOCK_MODE=true is the default
-make demo                     # one alert through the full pipeline
+make demo                     # one alert through the full pipeline (rich panels)
 make test                     # pytest
 make eval                     # 200-alert golden run + metrics
+make eval-summary             # pretty-print dataset stats + last eval run
 ```
 
 To run with real APIs: drop your keys into `.env`, set `MOCK_MODE=false`. Every external integration (LLM, Pinecone, the 5 TI feeds, DFIR-IRIS) is gated on the same flag — anything missing a key falls back to mock automatically.
@@ -46,22 +47,25 @@ Evaluation against the bundled 200-alert golden set (40 per technique × 5 techn
 ```
 $ python -m evals.run_evals --concurrency 16
 === AegisGraph Eval Summary ===
-  verdict_accuracy:           {'mean': 1.0,   'median': 1.0,    'n': 200}
-  attack_mapping_accuracy:    {'mean': 0.50,  'median': 0.5,    'n': 200}
+  verdict_accuracy:           {'mean': 0.41,  'median': 0.0,    'n': 200}
+  attack_mapping_accuracy:    {'mean': 0.58,  'median': 0.5,    'n': 200}
   hallucination_resistance:   {'mean': 1.0,   'median': 1.0,    'n': 200}
-  ioc_f1:                     {'mean': 0.80,  'median': 0.80,   'n': 200}
-  cost_per_alert_usd:         {'mean': 0.014, 'median': 0.01,   'n': 200}
-  wall_time_seconds:          4.68
+  ioc_f1:                     {'mean': 0.86,  'median': 1.0,    'n': 200}
+  cost_per_alert_usd:         {'mean': 0.015, 'median': 0.01,   'n': 200}
+  wall_time_seconds:          4.44
   alerts:                     200
 ```
 
-A few honest notes on those numbers:
+A few honest notes:
 
-- 1.0 verdict accuracy is on the synthetic dataset with the mock LLM. It tells you the wiring works and the rubric is consistent with itself; it does not tell you what a real Claude/GPT call would do on real noisy data.
-- `attack_mapping_accuracy` plateaus at 0.5 because the mock LLM keeps hitting the parent-vs-subtechnique partial-credit case (e.g. predicts `T1003.001` when ground truth is `T1003`). With a real model this should close most of that gap.
-- `ioc_f1` of 0.80 is after fixing a bug where the mock LLM was scanning the entire prompt (including the enrichment payload) for IOCs and reporting URLs from the enrichment links as if they were alert IOCs. The mock now scopes its extraction to the alert section.
-- `hallucination_resistance` is a heuristic check that summaries don't contain unhedged absolutes like "definitely" or "confirmed exfiltration". Not a substitute for a real grounding eval.
-- $0.014/alert is simulated from token counts the mock LLM returns. Real cost depends on the model.
+- These numbers are with the **mock LLM**, not a real model. The mock is deliberately keyword-driven — it hits TP for powershell-encoded prompts, otherwise picks a verdict roughly at random. So verdict_accuracy of 0.41 is what you'd expect from a 3-class system with a small recognition bonus. The point of running it like this is to prove the pipeline + evaluators are wired correctly across all three classes (TP / FP / Escalate). With real Claude this number jumps; the interesting work is making sure the eval *infrastructure* would catch a regression.
+- The dataset is correctly stratified: 16 TP / 14 FP / 10 escalate per technique × 5 techniques × 2 tenants = 200 alerts.
+- `ioc_f1 = 0.86` (median 1.0) is the genuine signal here — the IOC extractor and the enrichment-driven malicious tagging actually work. The number used to be ~0.63 before I fixed a bug where the mock LLM was scanning the enrichment payload (including TI tool URLs) as if it were the alert.
+- `attack_mapping_accuracy = 0.58` is HyDE retrieval finding the right technique family but the mock often picks a sibling sub-technique (e.g. `T1003.001` when truth is `T1003`), getting partial credit.
+- `hallucination_resistance` is a heuristic: it dings unhedged absolutes like "definitely" or "confirmed exfiltration" in the summary. Not a real grounding eval — that's a TODO.
+- $0.015/alert is simulated from the token counts the mock LLM hands back. Real cost depends on the model and prompt-cache hit rate.
+
+Run `make eval-summary` for a formatted view of the dataset breakdown plus the last eval run.
 
 `evals/last_results.json` has the per-alert breakdown.
 
@@ -119,14 +123,28 @@ docker-compose.yml   Redis + Postgres + DFIR-IRIS + the API
 kubernetes/       manifests
 ```
 
-## Things I'd do next
+## Multi-tenancy
 
-- Swap the synthetic Wazuh source for a Stellar Cyber XDR adapter (closer to what MSSPs actually ingest).
-- Per-tenant fine-tuning once there are real analyst decisions to learn from.
-- Wire `interrupt_after` into a tiny review UI so analysts can approve/reject before the IRIS write happens.
-- A LangSmith CI gate that fails PRs whose verdict accuracy regresses past a threshold.
+Two synthetic tenants ship in the box: **tenant_a / FinTech Corp** (AWS, PCI-DSS, payment-processor + auth-server are the crown jewels) and **tenant_b / Healthcare LLC** (on-prem VMware + Azure, HIPAA, EHR + radiology PACS are critical).
 
-## Threat model
+The isolation boundaries:
 
-Notes on prompt injection via alert fields, RAG poisoning, tool-misuse via crafted alerts, and DoS in `THREAT_MODEL.md`. Each item is mapped to a MITRE ATLAS technique where one applies.
+- **Pinecone** — each tenant gets its own `{tenant_id}_attack`, `{tenant_id}_sigma`, `{tenant_id}_runbooks` namespaces. Retriever calls are scoped at construction time, so one tenant can't accidentally pull another tenant's runbook into context.
+- **System prompts** — every node injects the tenant's environment description, critical asset list, and suppression rules into its system prompt. The same alert pattern reads differently against a fintech vs. a hospital.
+- **Redis Streams** — alerts publish to `alerts:{tenant_id}` so backpressure and noisy-neighbor effects stay scoped to one tenant.
+- **DFIR-IRIS** — `tenant_id` maps to a customer record so cases land under the right account.
+
+## Security and guardrails
+
+- **Prompt-injection guard** runs on every alert field and every TI tool response before the LLM sees them. Regex catches the obvious "ignore previous instructions" family + chat-template tokens; field truncation caps payload size.
+- **No user-submitted documents into the KB** — ingestion is offline and committed in code, not exposed via API. RAG poisoning needs a code change, not just a malicious upload.
+- **Threat model** is in [`THREAT_MODEL.md`](THREAT_MODEL.md), with each scenario mapped to a MITRE ATLAS technique.
+
+## Roadmap / what I'd do next
+
+- Swap the synthetic Wazuh source for a real Stellar Cyber XDR adapter — that's the actual MSSP ingestion path.
+- Per-tenant fine-tuning on historical analyst decisions to cut down on revision loops.
+- Torq webhook on the reporter for response automation (host isolation, ticket close) once a verdict is human-approved.
+- Wire `interrupt_after` into a tiny review UI so an analyst can approve/edit before the IRIS write happens.
+- LangSmith CI gate that fails a PR if verdict accuracy on the golden set regresses past a threshold.
 

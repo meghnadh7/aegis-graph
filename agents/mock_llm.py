@@ -196,12 +196,17 @@ _HASH_RE = re.compile(r"\b[a-fA-F0-9]{32,64}\b")
 _URL_RE = re.compile(r"https?://[^\s\"']+", re.IGNORECASE)
 
 
+_IP_BAD = {"0.0.0.0", "255.255.255.255", "10.0.0.0", "192.168.0.0", "172.16.0.0"}
+
+
 def _extract_iocs_from_text(text: str) -> List[Dict[str, Any]]:
     found: List[Dict[str, Any]] = []
     seen = set()
     for m in _IP_RE.finditer(text):
         v = m.group(0)
-        if v in seen or v.startswith(("0.", "127.")):
+        if v in seen or v.startswith(("0.", "127.")) or v in _IP_BAD:
+            continue
+        if v.endswith(".0.0") or v.endswith(".255"):
             continue
         seen.add(v)
         found.append({"type": "ip", "value": v, "source": "extractor", "malicious": False, "confidence": 0.5, "details": {}})
