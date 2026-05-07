@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/meghnadh7-aegis-graph-badge.png)](https://mseep.ai/app/meghnadh7-aegis-graph)
+
 # aegis-graph
 
 A small project I put together to build out what a Tier-1 SOC triage copilot looks like end to end — alert in, IOC enrichment, MITRE ATT&CK mapping, an investigation timeline, a self-critic that can force a revision, and a finished case in DFIR-IRIS.
